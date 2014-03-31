@@ -58,15 +58,15 @@ function _tk_setup() {
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
 	 * If you're building a theme based on _tk, use a find and replace
-	 * to change '_tk' to the name of your theme in all the template files
+	 * to change 'winkler' to the name of your theme in all the template files
 	*/
-	load_theme_textdomain( '_tk', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'winkler', get_template_directory() . '/languages' );
 
 	/**
 	 * This theme uses wp_nav_menu() in one location.
 	*/ 
     register_nav_menus( array(
-        'primary'  => __( 'Header bottom menu', '_tk' ),
+        'primary'  => __( 'Header bottom menu', 'winkler' ),
     ) );
 
 }
@@ -78,7 +78,7 @@ add_action( 'after_setup_theme', '_tk_setup' );
  */
 function _tk_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', '_tk' ),
+		'name'          => __( 'Sidebar', 'winkler' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -104,6 +104,10 @@ function _tk_scripts() {
 
     // load bootstrap wp js
     wp_enqueue_script( '_tk-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
+    wp_enqueue_script( '_tk-jquery-scrollTo', get_template_directory_uri() . '/includes/js/jquery.scrollTo.min.js', array('jquery') );
+
+      wp_enqueue_script( '_tk-navigationscroll', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
+
 
     wp_enqueue_script( '_tk-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -143,7 +147,3 @@ require get_template_directory() . '/includes/customizer.php';
  */
 require get_template_directory() . '/includes/jetpack.php';
 
-/**
- * Load custom WordPress nav walker.
- */
-require get_template_directory() . '/includes/bootstrap-wp-navwalker.php';

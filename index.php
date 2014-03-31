@@ -11,30 +11,90 @@
  * @package _tk
  */
 
-get_header(); ?>
+
+get_header();
+$args = array(
+	'sort_order' => 'ASC',
+	'sort_column' => 'menu_order', //post_title
+	'hierarchical' => 1,
+	'exclude' => '',
+	'child_of' => 0,
+	'parent' => -1,
+	'exclude_tree' => '',
+	'number' => '',
+	'offset' => 0,
+	'post_type' => 'page',
+	'post_status' => 'publish'
+	);
+$pages = get_pages($args);
+
+
+
+?>
+
+
+<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		<button type="button" id="menu-button">
+				<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/menu.png"/>
+		</button>		
+
+<div class="fadeGradient">
+</div>
+
+<nav id="main-menu" class="site-navigation">	
+
 	
-	<?php if ( have_posts() ) : ?>
+<ul >
 
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php
-				/* Include the Post-Format-specific template for the content.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'content', get_post_format() );
+		<?php
+		foreach ($pages as $page_data) {
+			$content = apply_filters('the_content', $page_data->post_content);
+			$title = $page_data->post_title;
+			$slug = $page_data->post_name;
+			
+			$subNav = $page_data->post_parent != 0;
+			$depth = count($page_data->ancestors);
 			?>
+			<li class="page_item depth-<?php echo $depth; ?>">
+				<a href="#<?php echo $slug?>"><?php echo $title?></a>
+			</li>
+			<?php 
+		} 
+		?>
+	</ul>
 
-		<?php endwhile; ?>
+</nav><!-- .site-navigation -->
 
-		<?php _tk_content_nav( 'nav-below' ); ?>
+<div class="main-content">	
+	<div class="container">
+		<div class="row">
+			<div id="content" class="main-content-inner col-sm-12 col-md-12">
 
-	<?php else : ?>
 
-		<?php get_template_part( 'no-results', 'index' ); ?>
+				<div id="primary" class="content-area">
+					<main id="main" class="site-main" role="main">
 
-	<?php endif; ?>
+						<?php
+						foreach ($pages as $page_data) {
+							$content = apply_filters('the_content', $page_data->post_content);
+							$title = $page_data->post_title;
+							$slug = $page_data->post_name;
+							$depth = count($page_data->ancestors);
+							?>
+							<section class='page <?php echo "$slug" ?> depth-<?php echo $depth;?>'><a name='<?php echo "$slug" ?>'></a>
+								<h2 class="pageTitle"><?php echo "$title" ?></h2>
+								<div class="content">
+								<?php echo "$content" ?>
+								</div>
+								<div class="clear"></div>
+							</section>
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+							<?php
+						}
+						?>
+					</main>
+				</div>
+				<?php
+//get_footer();
+				wp_footer(); 
+				?>

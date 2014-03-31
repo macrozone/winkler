@@ -31,7 +31,7 @@ Twitter Bootstrap
 
 /* This is a small security for too long strings titles */
 body {
-    word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 /* Alignment */
@@ -146,12 +146,12 @@ object {
 
 
 /* Here some needed widget styles 
- * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+* Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
 .widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line. 
- * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+* Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
 
 /* Make sure select elements fit in widgets */
@@ -160,50 +160,143 @@ object {
 }
 
 /* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!  
- * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
- .comment .children { margin-left: 1.5em; } 
- 
-/*  
- == Quick CSS styling tips ==
-
- You can start off in a rough direction with some minimal styles.
- See below for some tips. ;)
-
-  
- == Want to have the whole site wrapped? ==  
-  
- Just fill the .container class with some background color to have a the whole site "wrapped".
- This works so easy because every main part is wrapped only once into a container class by bootstrap. 
- Try out by decommenting the next line and go from there. 
-	
- .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+* For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+.comment .children { margin-left: 1.5em; } 
 
 
- == Want to wrap just the content and sidebar in Bootstrap style? == 
-  
- That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes. 
- In this case, we will add just one CSS class "panel", look for example at the beginning in content.php! 
- 
- 
- == Infinite Scrolling by Jetpack ==
- You can enable this cool feature by simply decommenting the lines below and make sure you use the same classes on the right place in your html.. 
+body
+{
+	color: white;
+}
 
-/* Globally hidden elements when Infinite Scroll is supported and in use. 
- * Older / Newer Posts Navigation (the pagination, must always be hidden), Theme Footer only when set to scrolling.. */ 
+/** content **/
+#masthead
+{
+	position: fixed;
+	z-index: 200;
+	top: 0px;
+	left: 0px;
+	padding: 16px;
+}
 
-/* 
-.infinite-scroll .page-links, 
-.infinite-scroll.neverending .site-footer { 
+.main-content
+{
+	margin-top: 120px;
+}
+#menu-button
+{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	z-index: 200;
+	padding: 0px;
+	width: 60px;
+	border: none;
+}
+
+#main-menu
+{
+	z-index: 200;
+	position: fixed;
+	height: 100%;
+	top: 0px;
+	right: -180px;
+	width: 180px;
+	background-color: white;
+}
+
+#main-menu ul
+{
+	padding: 0px;
+}
+#main-menu ul li
+{
+	list-style: none;
+	padding: 12px;
+}
+#main-menu ul li a
+{
+	color: #333;
+	font-size: 16px;
+}
+#main-menu ul li
+{
 	display: none;
 }
-*/
+#main-menu ul li.depth-0, #main-menu ul li.depth-1
+{
+	display: block;	
+}
+#main-menu ul li.depth-1
+{
+	padding-left: 64px;
+}
 
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.main-content,  #menu-button,  #main-menu
+{
+	transition: 0.3s;
+}
 
-/*
-.infinity-end.neverending .site-footer {
+body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visible #main-menu
+{
+	-ms-transform: translate(-180px,0); /* IE 9 */
+	-webkit-transform: translate(-180px,0px); /* Chrome, Safari, Opera */
+	transform: translate(-180px,0px);
+}
+@media (min-width: 520px) {
+
+}
+
+.fadeGradient
+{
+	z-index: 100;
+	height: 200px;
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.clear
+{
+	clear: both;
+}
+.page
+{
+text-align: center;
+
+}
+
+.page.depth-2 > h2.pageTitle
+{
+	float: left;
+}
+.page.depth-2
+{
+	border-bottom: 1px solid white;
+}
+.page.depth-2 >.content
+{
+	display: none;
+}
+
+.page.depth-2.open >.content
+{
 	display: block;
-} 
-*/
-
-/* Hey, if you don't need my comments anymore, just delete me! :)  */  	
+}
+.page.depth-0 > h2.pageTitle, .page.depth-1 > h2.pageTitle
+{
+	font-weight: normal;
+	color: white;
+	font-size: 36px;
+	
+	border-bottom: 1px solid white;
+	padding-bottom: 20px;
+}
