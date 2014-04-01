@@ -167,6 +167,7 @@ object {
 body
 {
 	color: white;
+	font-size: 18px;
 }
 
 /** content **/
@@ -176,33 +177,47 @@ body
 	z-index: 200;
 	top: 0px;
 	left: 0px;
-	padding: 16px;
+	
 }
 
-.main-content
+#masthead .logo
 {
-	margin-top: 120px;
+	padding-top: 48px;
+	padding-left: 36px;
 }
+
+#masthead .logo img
+{
+	height: 24px;
+}
+
+
 #menu-button
 {
 	position: fixed;
-	top: 0px;
-	right: 0px;
+	top: 48px;
+	right: 36px;
 	z-index: 200;
 	padding: 0px;
-	width: 60px;
+	width: 38px;
 	border: none;
+	background-color: transparent;
 }
 
 #main-menu
 {
+	padding-top: 48px;
+	padding-left: 36px;
 	z-index: 200;
 	position: fixed;
 	height: 100%;
 	top: 0px;
-	right: -180px;
-	width: 180px;
-	background-color: white;
+	right: -220px;
+	width: 220px;
+	background-color: black;
+	border-left: 1px solid white;
+	text-transform: uppercase;
+
 }
 
 #main-menu ul
@@ -212,12 +227,16 @@ body
 #main-menu ul li
 {
 	list-style: none;
-	padding: 12px;
+	padding-bottom: 12px;
 }
 #main-menu ul li a
 {
-	color: #333;
+	color: #808285;
 	font-size: 16px;
+}
+#main-menu ul li a.active
+{
+	color: white;
 }
 #main-menu ul li
 {
@@ -229,7 +248,7 @@ body
 }
 #main-menu ul li.depth-1
 {
-	padding-left: 64px;
+	padding-left: 24px;
 }
 
 .main-content,  #menu-button,  #main-menu
@@ -239,9 +258,9 @@ body
 
 body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visible #main-menu
 {
-	-ms-transform: translate(-180px,0); /* IE 9 */
-	-webkit-transform: translate(-180px,0px); /* Chrome, Safari, Opera */
-	transform: translate(-180px,0px);
+	-ms-transform: translate(-222px,0); /* IE 9 */
+	-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
+	transform: translate(-222px,0px);
 }
 @media (min-width: 520px) {
 
@@ -250,7 +269,7 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 .fadeGradient
 {
 	z-index: 100;
-	height: 200px;
+	height: 100px;
 	width: 100%;
 	position: fixed;
 	top: 0px;
@@ -270,33 +289,73 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 }
 .page
 {
-text-align: center;
+text-align: left;
+background-color: black;
 
 }
 
-.page.depth-2 > h2.pageTitle
+.page.odd
 {
-	float: left;
+	/* -webkit-filter: invert(100%);  */
 }
-.page.depth-2
+.page.depth-0
 {
-	border-bottom: 1px solid white;
+	margin-top: 64px;
+}
+
+
+.page.depth-2 .content
+{
+	padding: 16px 0px;
+	float: right;
 }
 .page.depth-2 >.content
 {
 	display: none;
+
 }
 
 .page.depth-2.open >.content
 {
 	display: block;
+
 }
-.page.depth-0 > h2.pageTitle, .page.depth-1 > h2.pageTitle
+.page> h2.pageTitle
 {
+	text-align: center;
 	font-weight: normal;
 	color: white;
-	font-size: 36px;
+	font-size: 1.2em;
+	text-transform: uppercase;;
 	
-	border-bottom: 1px solid white;
+	margin: 0px;
 	padding-bottom: 20px;
+}
+
+.page.depth-2 h2.pageTitle
+{
+	padding: 0px;
+	text-align: left;
+	margin: 16px 0px;
+}
+
+.page.depth-1 > h2.pageTitle
+{
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.page.depth-2, .page.depth-1 > h2.pageTitle
+{
+	border-bottom: 1px solid white;
+}
+
+.page.home
+{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-image: url(includes/resources/images/home-picture.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: center;
 }

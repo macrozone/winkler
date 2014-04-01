@@ -6,6 +6,23 @@
  *
  * @package _tk
  */
+
+
+$args = array(
+	'sort_order' => 'ASC',
+	'sort_column' => 'menu_order', //post_title
+	'hierarchical' => 1,
+	'exclude' => '',
+	'child_of' => 0,
+	'parent' => -1,
+	'exclude_tree' => '',
+	'number' => '',
+	'offset' => 0,
+	'post_type' => 'page',
+	'post_status' => 'publish'
+	);
+$pages = get_pages($args);
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -21,30 +38,48 @@
 	<?php do_action( 'before' ); ?>
 	
 	<header id="masthead" class="site-header" role="banner">
-		<div class="container">
-			<div class="row">
-				<div class="site-header-inner col-sm-12">
+		<div class="logo">
+		<!--
+					<object data="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.svg" type="image/svg+xml">
+ 	<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
+ 	</object>
+ 	-->
+ 	<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
+</object>
 					
-					<?php $header_image = get_header_image();
-					if ( ! empty( $header_image ) ) { ?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-					</a>
-					<?php } // end if ( ! empty( $header_image ) ) ?>
+				
 
 
-					<div class="site-branding">
-						<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
-					</div>
+		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+		<button type="button" id="menu-button">
+			<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/menu.png"/>
+		</button>		
 
 
-					
+		<nav id="main-menu" class="site-navigation">	
 
 
+			<ul >
+<li class="page_item depth-0">
+<a href="#">Home</a>
+</li>
+				<?php
+				foreach ($pages as $page_data) {
+					$content = apply_filters('the_content', $page_data->post_content);
+					$title = $page_data->post_title;
+					$slug = $page_data->post_name;
 
-				</div>
-			</div>
-			
-		</div><!-- .container -->
+					$subNav = $page_data->post_parent != 0;
+					$depth = count($page_data->ancestors);
+					?>
+					<li class="page_item depth-<?php echo $depth; ?>">
+						<a href="#<?php echo $slug?>"><?php echo $title?></a>
+					</li>
+					<?php 
+				} 
+				?>
+			</ul>
+
+		</nav><!-- .site-navigation -->
 	</header><!-- #masthead -->
 
