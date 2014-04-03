@@ -306,6 +306,7 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 {
 text-align: left;
 background-color: black;
+overflow: hidden;
 
 
 }
@@ -341,13 +342,14 @@ background-color: black;
 }
 .page.depth-2 >.content
 {
-	
+	height: 0px;
 
 }
 
 .page.depth-2.open >.content
 {
-	display: block;
+	
+	height: auto;
 
 }
 .page> h2.pageTitle
