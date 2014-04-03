@@ -117,7 +117,6 @@ function showPagesWithParent($parentID, $excludeSlugs = array())
 	<main id="main" class="site-main" role="main">
 
 	<section class="page home depth-0">
-	<iframe src="//player.vimeo.com/video/43562659" width="100%" height="400px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 	</section>
 
 		<?php
