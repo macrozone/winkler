@@ -19,11 +19,11 @@
 
 
 /* Background */
-.rsDefaultInv,
-.rsDefaultInv .rsOverflow,
-.rsDefaultInv .rsSlide,
-.rsDefaultInv .rsVideoFrameHolder,
-.rsDefaultInv .rsThumbs {
+.rsWinkler,
+.rsWinkler .rsOverflow,
+.rsWinkler .rsSlide,
+.rsWinkler .rsVideoFrameHolder,
+.rsWinkler .rsThumbs {
 	background: #EEE;
 	color: #222;
 }
@@ -35,7 +35,7 @@
 *
 ****************/
 
-.rsDefaultInv .rsArrow {
+.rsWinkler .rsArrow {
 	height: 100%;
 	width: 44px;
 	position: absolute;
@@ -43,18 +43,18 @@
 	cursor: pointer;
 	z-index: 21;
 }
-.rsDefaultInv.rsVer .rsArrow {
+.rsWinkler.rsVer .rsArrow {
 	width: 100%;
 	height: 44px;
 	
 }
-.rsDefaultInv.rsVer .rsArrowLeft { top: 0; left: 0; }
-.rsDefaultInv.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+.rsWinkler.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsWinkler.rsVer .rsArrowRight { bottom: 0;  left: 0; }
 
-.rsDefaultInv.rsHor .rsArrowLeft { left: 0; top: 0; }
-.rsDefaultInv.rsHor .rsArrowRight { right: 0; top:0; }
+.rsWinkler.rsHor .rsArrowLeft { left: 0; top: 0; }
+.rsWinkler.rsHor .rsArrowRight { right: 0; top:0; }
 
-.rsDefaultInv .rsArrowIcn {		
+.rsWinkler .rsArrowIcn {		
 	width: 32px;
 	height: 32px;
 	top: 50%;
@@ -72,17 +72,17 @@
 	
 	border-radius: 2px;
 }
-.rsDefaultInv .rsArrowIcn:hover {
+.rsWinkler .rsArrowIcn:hover {
 	background-color: rgba(255,255,255,0.9);
 }
 
-.rsDefaultInv.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsDefaultInv.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+.rsWinkler.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsWinkler.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
 
-.rsDefaultInv.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
-.rsDefaultInv.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+.rsWinkler.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsWinkler.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
 
-.rsDefaultInv .rsArrowDisabled .rsArrowIcn { filter: alpha(opacity=20); opacity: .2; *display: none; }
+.rsWinkler .rsArrowDisabled .rsArrowIcn { filter: alpha(opacity=20); opacity: .2; *display: none; }
 
 
 /***************
@@ -91,7 +91,7 @@
 *
 ****************/
 
-.rsDefaultInv .rsBullets {
+.rsWinkler .rsBullets {
 	position: relative;
 	z-index: 35;
 	padding-top: 4px;
@@ -103,7 +103,7 @@
 	line-height: 5px;
 	overflow: hidden;
 }
-.rsDefaultInv .rsBullet {
+.rsWinkler .rsBullet {
 	width: 5px;
 	height: 5px;
 	display: inline-block;
@@ -111,14 +111,14 @@
 	*zoom:1;
 	padding: 6px;
 }
-.rsDefaultInv .rsBullet span {
+.rsWinkler .rsBullet span {
 	display: block;
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
 	background: #BBB;
 }
-.rsDefaultInv .rsBullet.rsNavSelected span {
+.rsWinkler .rsBullet.rsNavSelected span {
 	background-color: #000;
 }
 
@@ -132,54 +132,54 @@
 *
 ****************/
 
-.rsDefaultInv .rsThumbsHor {
+.rsWinkler .rsThumbsHor {
 	width: 100%;
 	height: 72px;
 }
-.rsDefaultInv .rsThumbsVer {
+.rsWinkler .rsThumbsVer {
 	width: 96px;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-.rsDefaultInv.rsWithThumbsHor .rsThumbsContainer {
+.rsWinkler.rsWithThumbsHor .rsThumbsContainer {
 	position: relative;
 	height: 100%;
 }
-.rsDefaultInv.rsWithThumbsVer .rsThumbsContainer {
+.rsWinkler.rsWithThumbsVer .rsThumbsContainer {
 	position: relative;
 	width: 100%;
 }
-.rsDefaultInv .rsThumb {
+.rsWinkler .rsThumb {
 	float: left;
 	overflow: hidden;
 	width: 96px;
 	height: 72px;
 }
-.rsDefaultInv .rsThumb img {
+.rsWinkler .rsThumb img {
 	width: 100%;
 	height: 100%;
 }
-.rsDefaultInv .rsThumb.rsNavSelected {
+.rsWinkler .rsThumb.rsNavSelected {
 	background: #FFF;
 }
-.rsDefaultInv .rsThumb.rsNavSelected img {
+.rsWinkler .rsThumb.rsNavSelected img {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 }
-.rsDefaultInv .rsTmb {
+.rsWinkler .rsTmb {
 	display: block;
 }
 
 /* Thumbnails with text */
-.rsDefaultInv .rsTmb h5 {
+.rsWinkler .rsTmb h5 {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	line-height: 20px;
 }
-.rsDefaultInv .rsTmb span {
+.rsWinkler .rsTmb span {
 	color: #DDD;
 	margin: 0;
 	padding: 0;
@@ -190,7 +190,7 @@
 
 
 /* Thumbnails arrow icons */
-.rsDefaultInv .rsThumbsArrow {
+.rsWinkler .rsThumbsArrow {
 	height: 100%;
 	width: 20px;
 	position: absolute;
@@ -200,20 +200,20 @@
 	background: #FFF;
 	background: rgba(255,255,255,0.75);
 }
-.rsDefaultInv .rsThumbsArrow:hover {
+.rsWinkler .rsThumbsArrow:hover {
 	background: rgba(255,255,255,0.9);
 }
-.rsDefaultInv.rsWithThumbsVer .rsThumbsArrow {
+.rsWinkler.rsWithThumbsVer .rsThumbsArrow {
 	width: 100%;
 	height: 20px;
 }
-.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
-.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+.rsWinkler.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.rsWinkler.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
 
-.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
-.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+.rsWinkler.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.rsWinkler.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
 
-.rsDefaultInv .rsThumbsArrowIcn {		
+.rsWinkler .rsThumbsArrowIcn {		
 	width: 16px;
 	height: 16px;
 	top: 50%;
@@ -225,24 +225,24 @@
 	background: url('rs-default-inverted.png');
 }
 
-.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
-.rsDefaultInv.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+.rsWinkler.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.rsWinkler.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
 
-.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
-.rsDefaultInv.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+.rsWinkler.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.rsWinkler.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
 
-.rsDefaultInv .rsThumbsArrowDisabled { display: none !important; }
+.rsWinkler .rsThumbsArrowDisabled { display: none !important; }
 
 /* Thumbnails resizing on smaller screens */
 @media screen and (min-width: 0px) and (max-width: 800px) {
-	.rsDefaultInv .rsThumb {
+	.rsWinkler .rsThumb {
 		width: 59px;
 		height: 44px;
 	}
-	.rsDefaultInv .rsThumbsHor {
+	.rsWinkler .rsThumbsHor {
 		height: 44px;
 	}
-	.rsDefaultInv .rsThumbsVer {
+	.rsWinkler .rsThumbsVer {
 		width: 59px;
 	}
 }
@@ -256,14 +256,14 @@
 *
 ****************/
 
-.rsDefaultInv .rsTabs {
+.rsWinkler .rsTabs {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	text-align:center;
 	overflow: hidden; padding-top: 12px; position: relative;
 }
-.rsDefaultInv .rsTab {
+.rsWinkler .rsTab {
 	display: inline-block;
 	cursor: pointer;
 	text-align: center;
@@ -287,13 +287,13 @@
 	*display:inline; 
 	*zoom:1;
 }
-.rsDefaultInv .rsTab:first-child {
+.rsWinkler .rsTab:first-child {
 	-webkit-border-top-left-radius: 4px;
 	border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.rsDefaultInv .rsTab:last-child { 
+.rsWinkler .rsTab:last-child { 
 	-webkit-border-top-right-radius: 4px;
 	border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -301,12 +301,12 @@
 
 	border-right:  1px solid #cfcfcf;
 }
-.rsDefaultInv .rsTab:active { 
+.rsWinkler .rsTab:active { 
 	border: 1px solid #D9D9DD;   
 	background-color: #f4f4f4;
 	box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
 }
-.rsDefaultInv .rsTab.rsNavSelected { 
+.rsWinkler .rsTab.rsNavSelected { 
 	color: #FFF;
 	border: 1px solid #999;
 	text-shadow: 1px 1px #838383;
@@ -327,7 +327,7 @@
 *
 ****************/
 
-.rsDefaultInv .rsFullscreenBtn {
+.rsWinkler .rsFullscreenBtn {
 	right: 0;
 	top: 0;
 	width: 44px;
@@ -338,7 +338,7 @@
 	cursor: pointer;
 	
 }
-.rsDefaultInv .rsFullscreenIcn {
+.rsWinkler .rsFullscreenIcn {
 	display: block;
 	margin: 6px;
 	width: 32px;
@@ -351,10 +351,10 @@
 	border-radius: 2px;
 
 }
-.rsDefaultInv .rsFullscreenIcn:hover {
+.rsWinkler .rsFullscreenIcn:hover {
 	background-color: rgba(255,255,255,0.9);
 }
-.rsDefaultInv.rsFullscreen .rsFullscreenIcn {
+.rsWinkler.rsFullscreen .rsFullscreenIcn {
 	background-position: -32px 0;
 }
 
@@ -368,7 +368,7 @@
 *
 ****************/
 
-.rsDefaultInv .rsPlayBtn {
+.rsWinkler .rsPlayBtn {
 	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
 	width:64px;
 	height:64px;
@@ -376,7 +376,7 @@
 	margin-top:-32px;
 	cursor: pointer;
 }
-.rsDefaultInv .rsPlayBtnIcon {
+.rsWinkler .rsPlayBtnIcon {
 	width:64px;
 	display:block;
 	height:64px;
@@ -392,17 +392,17 @@
 	background-color: rgba(255,255,255,0.75);
 	*background-color: #FFF;
 }
-.rsDefaultInv .rsPlayBtn:hover .rsPlayBtnIcon {
+.rsWinkler .rsPlayBtn:hover .rsPlayBtnIcon {
 	background-color: rgba(255,255,255,0.9);
 }
-.rsDefaultInv .rsBtnCenterer {
+.rsWinkler .rsBtnCenterer {
 	position:absolute;
 	left:50%;
 	top:50%;
 	width: 20px;
 	height: 20px;
 }
-.rsDefaultInv .rsCloseVideoBtn {
+.rsWinkler .rsCloseVideoBtn {
 	right: 0;
 	top: 0;
 	width: 44px;
@@ -414,12 +414,12 @@
 	-webkit-transform: translateZ(0);
 	
 }
-.rsDefaultInv .rsCloseVideoBtn.rsiOSBtn {
+.rsWinkler .rsCloseVideoBtn.rsiOSBtn {
 	top: -38px;
 	right: -6px;
 }
 
-.rsDefaultInv .rsCloseVideoIcn {
+.rsWinkler .rsCloseVideoIcn {
 	margin: 6px;
 	width: 32px;
 	height: 32px;
@@ -428,7 +428,7 @@
 	background-color: rgba(255,255,255,0.75);
 	*background-color: #FFF;
 }
-.rsDefaultInv .rsCloseVideoIcn:hover {
+.rsWinkler .rsCloseVideoIcn:hover {
 	background-color: rgba(255,255,255,0.9);
 }
 
@@ -440,7 +440,7 @@
 *
 ****************/
 
-.rsDefaultInv .rsPreloader {
+.rsWinkler .rsPreloader {
 	width:20px;
 	height:20px;
 	background-image:url(../preloaders/preloader.gif);
@@ -459,7 +459,7 @@
 *  8. Global caption
 *
 ****************/
-.rsDefaultInv .rsGCaption {
+.rsWinkler .rsGCaption {
 	position: absolute;
 	float: none;
 	bottom: 6px;
