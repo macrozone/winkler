@@ -45,7 +45,7 @@ $pages = get_pages($args);
  	</object>
  	-->
  	<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
-</object>
+</div>
 					
 				
 
