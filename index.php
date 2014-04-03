@@ -50,15 +50,20 @@ function showOnePage($page, $index)
 		<section id="page_<?php echo $slug ?>" class='page <?php echo "$slug" ?> depth-<?php echo $depth;?> <?php echo $evenOdd ?>'>
 	
 			<h2 class="pageTitle"><?php echo "$title" ?></h2>
-			<div class="content <?php echo ($depth >=2?  "col-sm-10" : "")?>">
+			<div class="container content">
+			<div class="wrapper col-xs-12 col-sm-10">
 				<?php echo "$content" ?>
+			
 			</div>
-			<div class="clear"></div>
+			</div>
+			
 			<?php
 
 			if($page->ID >0)
 				showPagesWithParent($page->ID);
 			?>
+
+			<div class="separator"></div>
 
 		</section>
 	
@@ -112,10 +117,9 @@ function showPagesWithParent($parentID, $excludeSlugs = array())
 	<main id="main" class="site-main" role="main">
 
 	<section class="page home depth-0">
-
+	<iframe src="//player.vimeo.com/video/43562659" width="100%" height="400px" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
 	</section>
-<div class="container">
-<div class="col-sm-12 col-md-12">
+
 		<?php
 		//showHome();
 		//showPagesWithParent(0, array("home"));

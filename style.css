@@ -182,8 +182,8 @@ body
 
 #masthead .logo
 {
-	padding-top: 48px;
-	padding-left: 36px;
+	padding-top: 40px;
+	padding-left: 40px;
 }
 
 #masthead .logo img
@@ -195,8 +195,8 @@ body
 #menu-button
 {
 	position: fixed;
-	top: 48px;
-	right: 36px;
+	top: 40px;
+	right: 40px;
 	z-index: 200;
 	padding: 0px;
 	width: 38px;
@@ -206,8 +206,8 @@ body
 
 #main-menu
 {
-	padding-top: 48px;
-	padding-left: 36px;
+	padding-top: 40px;
+	padding-left: 40px;
 	z-index: 200;
 	position: fixed;
 	height: 100%;
@@ -297,6 +297,19 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 text-align: left;
 background-color: black;
 
+
+}
+.page .container
+{
+	padding-bottom: 0px;
+}
+.page .content .wrapper
+{
+	margin: 0 auto;
+	float: none;
+	padding-left: 25px;
+	padding-right: 25px;
+
 }
 
 .page.odd
@@ -305,14 +318,16 @@ background-color: black;
 }
 .page.depth-0
 {
+	
 	margin-top: 64px;
+
 }
 
 
-.page.depth-2 .content
+.page.depth-2 .content .wrapper
 {
-	padding: 16px 0px;
-	float: right;
+	padding-top: 16px;
+	padding-bottom: 16px;
 }
 .page.depth-2 >.content
 {
@@ -340,7 +355,7 @@ background-color: black;
 .page.depth-2 h2.pageTitle
 {
 	padding: 0px;
-	text-align: left;
+
 	margin: 16px 0px;
 }
 
@@ -349,8 +364,11 @@ background-color: black;
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
-.page.depth-2, .page.depth-1 > h2.pageTitle
+.page.depth-2 .separator, .page.depth-1 > h2.pageTitle
 {
+
+	margin-left: 40px;
+	margin-right: 40px;
 	border-bottom: 1px solid white;
 }
 
