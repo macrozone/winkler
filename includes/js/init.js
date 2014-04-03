@@ -70,7 +70,7 @@ jQuery(function($)
 	});
 
 
-	Hammer(document.body).on("swipeleft", function()
+	Hammer(document.getElementById("menu-button")).on("swipeleft", function()
 	{
 
 		if(!$("body").hasClass("menu-visible"))
