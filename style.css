@@ -306,13 +306,14 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 {
 text-align: left;
 background-color: black;
-overflow: hidden;
+
 
 
 }
 .page .container
 {
 	padding-bottom: 0px;
+	overflow: hidden;
 }
 .page .content .wrapper
 {
@@ -327,7 +328,7 @@ overflow: hidden;
 {
 	/* -webkit-filter: invert(100%);  */
 }
-.page.depth-0
+.page.depth-0, .page.depth-1
 {
 	
 	padding-top: 100px;
@@ -358,19 +359,26 @@ overflow: hidden;
 	text-align: center;
 	font-weight: normal;
 	color: #a7a1a7;
-	font-size: 1.2em;
+	font-size: 30px;
 	text-transform: uppercase;;
 	
 	margin: 0px;
 	padding-bottom: 20px;
 }
 
-.page.depth-2 h2.pageTitle
+.page.depth-1 > h2.pageTitle
+{
+	padding-top: 16px;
+	padding-bottom: 16px;
+	font-size: 30px;
+}
+.page.depth-2 > h2.pageTitle
 {
 	padding: 0px;
 
 	margin: 16px 0px;
 	cursor: pointer;
+	font-size: 24px;
 
 }
 .page.depth-2 h2.pageTitle:hover
@@ -379,11 +387,6 @@ overflow: hidden;
 	color: white;
 }
 
-.page.depth-1 > h2.pageTitle
-{
-	padding-top: 16px;
-	padding-bottom: 16px;
-}
 .page.depth-2 .separator, .page.depth-1 > h2.pageTitle
 {
 
