@@ -69,6 +69,33 @@ jQuery(function($)
 		return false;
 	});
 
+
+	Hammer(document.body).on("swipeleft", function()
+	{
+
+		if(!$("body").hasClass("menu-visible"))
+		{
+
+			$("body").addClass("menu-visible");
+			return false;
+		}
+		else 
+			return true;
+
+	});
+
+	Hammer(document.body).on("swiperight", function()
+	{
+		if($("body").hasClass("menu-visible"))
+		{
+
+			$("body").removeClass("menu-visible");
+			return false;
+		}
+		else 
+			return true;
+
+	});
 	$("body").on("click", function()
 	{
 		if($("body").hasClass("menu-visible"))
