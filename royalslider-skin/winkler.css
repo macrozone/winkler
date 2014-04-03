@@ -1,6 +1,6 @@
 /******************************
 *
-*  RoyalSlider Default Skin 
+*  RoyalSlider Winkler Skin
 *
 *    1. Arrows 
 *    2. Bullets
@@ -11,7 +11,7 @@
 *    7. Preloader
 *    8. Caption
 *    
-*  Sprite: 'rs-default.png'
+*  Sprite: 'winkler.png'
 *  Feel free to edit anything
 *  If you don't some part - just delete it
 * 
@@ -64,7 +64,7 @@
 
 	position: absolute;	
 	cursor: pointer;	
-	background: url('rs-default.png');
+	background: url('winkler.png');
 
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
@@ -167,7 +167,7 @@
 	height: 100%;
 }
 .rsWinkler .rsThumb.rsNavSelected {
-	background: #02874a;
+	background: #a7a1a7;
 }
 .rsWinkler .rsThumb.rsNavSelected img {
 	opacity: 0.3;
@@ -228,7 +228,7 @@
 	margin-left: -8px;
 	position: absolute;	
 	cursor: pointer;	
-	background: url('rs-default.png');
+	background: url('winkler.png');
 }
 
 .rsWinkler.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
@@ -350,7 +350,7 @@
 	width: 32px;
 	height: 32px;
 
-	background: url('rs-default.png') 0 0;
+	background: url('winkler.png') 0 0;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
@@ -393,7 +393,7 @@
 	-moz-transition: .3s;
 	transition: .3s;
 
-	background:url(rs-default.png) no-repeat 0 -32px;
+	background:url(winkler.png) no-repeat 0 -32px;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
@@ -427,7 +427,7 @@
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('rs-default.png') -64px 0;
+	background: url('winkler.png') -64px 0;
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
 	*background-color: #000;
@@ -466,16 +466,17 @@
 .rsWinkler .rsGCaption {
 	position: absolute;
 	float: none;
-	bottom: 6px;
-	left: 6px;
+	bottom: 0px;
+	left: 0px;
 	text-align: left;
 
 	background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.5);
 
-	color: #FFF;
-	padding: 2px 8px;
-	width: auto;
-	font-size: 12px;
-	border-radius: 2px;
+	color: #white;
+	padding: 8px 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 14px;
+	
 }
