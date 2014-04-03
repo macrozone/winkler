@@ -166,7 +166,7 @@ object {
 
 body
 {
-	color: white;
+	color: #a7a1a7;
 	font-size: 18px;
 }
 
@@ -194,6 +194,7 @@ body
 
 #menu-button
 {
+	cursor: pointer;
 	position: fixed;
 	top: 40px;
 	right: 40px;
@@ -222,7 +223,7 @@ body
 	right: -220px;
 	width: 220px;
 	background-color: black;
-	border-left: 1px solid white;
+	border-left: 1px solid #a7a1a7;
 	text-transform: uppercase;
 
 }
@@ -238,13 +239,15 @@ body
 }
 #main-menu ul li a
 {
-	color: #808285;
+	color: #a7a1a7;
 	font-size: 16px;
 }
-#main-menu ul li a.active
+#main-menu ul li a.active, #main-menu ul li a:hover
 {
 	color: white;
+	text-decoration: none;
 }
+
 #main-menu ul li
 {
 	display: none;
@@ -273,8 +276,8 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 	body.menu-visible #masthead .logo
 	{
 		-ms-transform: translate(-222px,0); /* IE 9 */
-	-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
-	transform: translate(-222px,0px);
+		-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
+		transform: translate(-222px,0px);
 	}
 }
 
@@ -349,9 +352,10 @@ background-color: black;
 }
 .page> h2.pageTitle
 {
+
 	text-align: center;
 	font-weight: normal;
-	color: white;
+	color: #a7a1a7;
 	font-size: 1.2em;
 	text-transform: uppercase;;
 	
@@ -364,6 +368,13 @@ background-color: black;
 	padding: 0px;
 
 	margin: 16px 0px;
+	cursor: pointer;
+
+}
+.page.depth-2 h2.pageTitle:hover
+{
+
+	color: white;
 }
 
 .page.depth-1 > h2.pageTitle
@@ -376,7 +387,7 @@ background-color: black;
 
 	margin-left: 40px;
 	margin-right: 40px;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #a7a1a7;
 }
 
 .page.home

@@ -59,7 +59,7 @@ $pages = get_pages($args);
 		<nav id="main-menu" class="site-navigation">	
 
 
-			<ul >
+			<ul>
 <li class="page_item depth-0">
 <a href="#">Home</a>
 </li>
