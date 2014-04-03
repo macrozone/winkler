@@ -51,9 +51,9 @@ $pages = get_pages($args);
 
 
 		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-		<button type="button" id="menu-button">
-			<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/menu.png"/>
-		</button>		
+		<a type="button" id="menu-button">
+		
+		</a>		
 
 
 		<nav id="main-menu" class="site-navigation">	

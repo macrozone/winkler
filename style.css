@@ -188,7 +188,7 @@ body
 
 #masthead .logo img
 {
-	height: 24px;
+	width: 257px;
 }
 
 
@@ -199,10 +199,17 @@ body
 	right: 40px;
 	z-index: 200;
 	padding: 0px;
-	width: 38px;
+	width: 23px;
+	height: 41px;
 	border: none;
+	background-image: url(includes/resources/images/menu.png);
 	background-color: transparent;
+	background-size: cover;
 }
+
+
+
+
 
 #main-menu
 {
