@@ -1,6 +1,6 @@
 /******************************
 *
-*  RoyalSlider Default Inverted Skin 
+*  RoyalSlider Default Skin 
 *
 *    1. Arrows 
 *    2. Bullets
@@ -11,7 +11,7 @@
 *    7. Preloader
 *    8. Caption
 *    
-*  Sprite: 'rs-default-inverted.png'
+*  Sprite: 'rs-default.png'
 *  Feel free to edit anything
 *  If you don't some part - just delete it
 * 
@@ -19,13 +19,13 @@
 
 
 /* Background */
-.rsWinkler,
-.rsWinkler .rsOverflow,
-.rsWinkler .rsSlide,
-.rsWinkler .rsVideoFrameHolder,
-.rsWinkler .rsThumbs {
-	background: #EEE;
-	color: #222;
+.rsDefault,
+.rsDefault .rsOverflow,
+.rsDefault .rsSlide,
+.rsDefault .rsVideoFrameHolder,
+.rsDefault .rsThumbs {
+	background: #151515;
+	color: #FFF;
 }
 
 
@@ -35,7 +35,7 @@
 *
 ****************/
 
-.rsWinkler .rsArrow {
+.rsDefault .rsArrow {
 	height: 100%;
 	width: 44px;
 	position: absolute;
@@ -43,18 +43,18 @@
 	cursor: pointer;
 	z-index: 21;
 }
-.rsWinkler.rsVer .rsArrow {
+.rsDefault.rsVer .rsArrow {
 	width: 100%;
 	height: 44px;
 	
 }
-.rsWinkler.rsVer .rsArrowLeft { top: 0; left: 0; }
-.rsWinkler.rsVer .rsArrowRight { bottom: 0;  left: 0; }
+.rsDefault.rsVer .rsArrowLeft { top: 0; left: 0; }
+.rsDefault.rsVer .rsArrowRight { bottom: 0;  left: 0; }
 
-.rsWinkler.rsHor .rsArrowLeft { left: 0; top: 0; }
-.rsWinkler.rsHor .rsArrowRight { right: 0; top:0; }
+.rsDefault.rsHor .rsArrowLeft { left: 0; top: 0; }
+.rsDefault.rsHor .rsArrowRight { right: 0; top:0; }
 
-.rsWinkler .rsArrowIcn {		
+.rsDefault .rsArrowIcn {		
 	width: 32px;
 	height: 32px;
 	top: 50%;
@@ -64,25 +64,25 @@
 
 	position: absolute;	
 	cursor: pointer;	
-	background: url('rs-default-inverted.png');
+	background: url('rs-default.png');
 
-	background-color: #FFF;
-	background-color: rgba(255,255,255, .75);
-	*background-color: #FFF;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
 	
 	border-radius: 2px;
 }
-.rsWinkler .rsArrowIcn:hover {
-	background-color: rgba(255,255,255,0.9);
+.rsDefault .rsArrowIcn:hover {
+	background-color: rgba(0,0,0,0.9);
 }
 
-.rsWinkler.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsWinkler.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
 
-.rsWinkler.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
-.rsWinkler.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
+.rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
+.rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }
 
-.rsWinkler .rsArrowDisabled .rsArrowIcn { filter: alpha(opacity=20); opacity: .2; *display: none; }
+.rsDefault .rsArrowDisabled .rsArrowIcn { opacity: .2; filter: alpha(opacity=20);  *display: none; }
 
 
 /***************
@@ -91,35 +91,40 @@
 *
 ****************/
 
-.rsWinkler .rsBullets {
-	position: relative;
+.rsDefault .rsBullets {
+	position: absolute;
 	z-index: 35;
-	padding-top: 4px;
+	left: 0;
+	bottom: 0;
 	width: 100%;
 	height: auto;
 	margin: 0 auto; 
 
+	background: #000;
+	background: rgba(0,0,0,0.75);
+
 	text-align: center;
-	line-height: 5px;
+	line-height: 8px;
 	overflow: hidden;
 }
-.rsWinkler .rsBullet {
-	width: 5px;
-	height: 5px;
+.rsDefault .rsBullet {
+	width: 8px;
+	height: 8px;
 	display: inline-block;
 	*display:inline; 
 	*zoom:1;
-	padding: 6px;
+	padding: 6px 5px 6px;
 }
-.rsWinkler .rsBullet span {
+.rsDefault .rsBullet span {
 	display: block;
-	width: 5px;
-	height: 5px;
+	width: 8px;
+	height: 8px;
 	border-radius: 50%;
-	background: #BBB;
+	background: #777;
+	background: rgba(255,255,255,0.5);
 }
-.rsWinkler .rsBullet.rsNavSelected span {
-	background-color: #000;
+.rsDefault .rsBullet.rsNavSelected span {
+	background-color: #FFF;
 }
 
 
@@ -132,54 +137,55 @@
 *
 ****************/
 
-.rsWinkler .rsThumbsHor {
+.rsDefault .rsThumbsHor {
 	width: 100%;
 	height: 72px;
 }
-.rsWinkler .rsThumbsVer {
+.rsDefault .rsThumbsVer {
 	width: 96px;
 	height: 100%;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-.rsWinkler.rsWithThumbsHor .rsThumbsContainer {
+.rsDefault.rsWithThumbsHor .rsThumbsContainer {
 	position: relative;
 	height: 100%;
 }
-.rsWinkler.rsWithThumbsVer .rsThumbsContainer {
+.rsDefault.rsWithThumbsVer .rsThumbsContainer {
 	position: relative;
 	width: 100%;
 }
-.rsWinkler .rsThumb {
+.rsDefault .rsThumb {
 	float: left;
 	overflow: hidden;
 	width: 96px;
 	height: 72px;
 }
-.rsWinkler .rsThumb img {
+.rsDefault .rsThumb img {
 	width: 100%;
 	height: 100%;
 }
-.rsWinkler .rsThumb.rsNavSelected {
-	background: #FFF;
+.rsDefault .rsThumb.rsNavSelected {
+	background: #02874a;
 }
-.rsWinkler .rsThumb.rsNavSelected img {
-	opacity: 0.5;
-	filter: alpha(opacity=50);
+.rsDefault .rsThumb.rsNavSelected img {
+	opacity: 0.3;
+	filter: alpha(opacity=30);
 }
-.rsWinkler .rsTmb {
+.rsDefault .rsTmb {
 	display: block;
 }
 
 /* Thumbnails with text */
-.rsWinkler .rsTmb h5 {
+.rsDefault .rsTmb h5 {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
 	line-height: 20px;
+	color: #FFF;
 }
-.rsWinkler .rsTmb span {
+.rsDefault .rsTmb span {
 	color: #DDD;
 	margin: 0;
 	padding: 0;
@@ -190,30 +196,30 @@
 
 
 /* Thumbnails arrow icons */
-.rsWinkler .rsThumbsArrow {
+.rsDefault .rsThumbsArrow {
 	height: 100%;
 	width: 20px;
 	position: absolute;
 	display: block;
 	cursor: pointer;	
 	z-index: 21;	
-	background: #FFF;
-	background: rgba(255,255,255,0.75);
+	background: #000;
+	background: rgba(0,0,0,0.75);
 }
-.rsWinkler .rsThumbsArrow:hover {
-	background: rgba(255,255,255,0.9);
+.rsDefault .rsThumbsArrow:hover {
+	background: rgba(0,0,0,0.9);
 }
-.rsWinkler.rsWithThumbsVer .rsThumbsArrow {
+.rsDefault.rsWithThumbsVer .rsThumbsArrow {
 	width: 100%;
 	height: 20px;
 }
-.rsWinkler.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
-.rsWinkler.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft { top: 0; left: 0; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight { bottom: 0;  left: 0; }
 
-.rsWinkler.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
-.rsWinkler.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft { left: 0; top: 0; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight { right: 0; top:0; }
 
-.rsWinkler .rsThumbsArrowIcn {		
+.rsDefault .rsThumbsArrowIcn {		
 	width: 16px;
 	height: 16px;
 	top: 50%;
@@ -222,27 +228,27 @@
 	margin-left: -8px;
 	position: absolute;	
 	cursor: pointer;	
-	background: url('rs-default-inverted.png');
+	background: url('rs-default.png');
 }
 
-.rsWinkler.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
-.rsWinkler.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -128px -32px; }
+.rsDefault.rsWithThumbsHor .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -128px -48px; }
 
-.rsWinkler.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
-.rsWinkler.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowLeft .rsThumbsArrowIcn { background-position: -144px -32px; }
+.rsDefault.rsWithThumbsVer .rsThumbsArrowRight .rsThumbsArrowIcn { background-position: -144px -48px; }
 
-.rsWinkler .rsThumbsArrowDisabled { display: none !important; }
+.rsDefault .rsThumbsArrowDisabled { display: none !important; }
 
 /* Thumbnails resizing on smaller screens */
 @media screen and (min-width: 0px) and (max-width: 800px) {
-	.rsWinkler .rsThumb {
+	.rsDefault .rsThumb {
 		width: 59px;
 		height: 44px;
 	}
-	.rsWinkler .rsThumbsHor {
+	.rsDefault .rsThumbsHor {
 		height: 44px;
 	}
-	.rsWinkler .rsThumbsVer {
+	.rsDefault .rsThumbsVer {
 		width: 59px;
 	}
 }
@@ -256,14 +262,14 @@
 *
 ****************/
 
-.rsWinkler .rsTabs {
+.rsDefault .rsTabs {
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
 	text-align:center;
 	overflow: hidden; padding-top: 12px; position: relative;
 }
-.rsWinkler .rsTab {
+.rsDefault .rsTab {
 	display: inline-block;
 	cursor: pointer;
 	text-align: center;
@@ -287,13 +293,13 @@
 	*display:inline; 
 	*zoom:1;
 }
-.rsWinkler .rsTab:first-child {
+.rsDefault .rsTab:first-child {
 	-webkit-border-top-left-radius: 4px;
 	border-top-left-radius: 4px;
 	-webkit-border-bottom-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.rsWinkler .rsTab:last-child { 
+.rsDefault .rsTab:last-child { 
 	-webkit-border-top-right-radius: 4px;
 	border-top-right-radius: 4px;
 	-webkit-border-bottom-right-radius: 4px;
@@ -301,12 +307,12 @@
 
 	border-right:  1px solid #cfcfcf;
 }
-.rsWinkler .rsTab:active { 
+.rsDefault .rsTab:active { 
 	border: 1px solid #D9D9DD;   
 	background-color: #f4f4f4;
 	box-shadow:  0 1px 4px rgba(0, 0, 0, 0.2) inset;
 }
-.rsWinkler .rsTab.rsNavSelected { 
+.rsDefault .rsTab.rsNavSelected { 
 	color: #FFF;
 	border: 1px solid #999;
 	text-shadow: 1px 1px #838383;
@@ -327,7 +333,7 @@
 *
 ****************/
 
-.rsWinkler .rsFullscreenBtn {
+.rsDefault .rsFullscreenBtn {
 	right: 0;
 	top: 0;
 	width: 44px;
@@ -338,23 +344,23 @@
 	cursor: pointer;
 	
 }
-.rsWinkler .rsFullscreenIcn {
+.rsDefault .rsFullscreenIcn {
 	display: block;
 	margin: 6px;
 	width: 32px;
 	height: 32px;
 
-	background: url('rs-default-inverted.png') 0 0;
-	background-color: #FFF;
-	background-color: rgba(255,255,255,0.75);
-	*background-color: #FFF;
+	background: url('rs-default.png') 0 0;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
 	border-radius: 2px;
 
 }
-.rsWinkler .rsFullscreenIcn:hover {
-	background-color: rgba(255,255,255,0.9);
+.rsDefault .rsFullscreenIcn:hover {
+	background-color: rgba(0,0,0,0.9);
 }
-.rsWinkler.rsFullscreen .rsFullscreenIcn {
+.rsDefault.rsFullscreen .rsFullscreenIcn {
 	background-position: -32px 0;
 }
 
@@ -368,7 +374,7 @@
 *
 ****************/
 
-.rsWinkler .rsPlayBtn {
+.rsDefault .rsPlayBtn {
 	-webkit-tap-highlight-color:rgba(0,0,0,0.3);
 	width:64px;
 	height:64px;
@@ -376,7 +382,7 @@
 	margin-top:-32px;
 	cursor: pointer;
 }
-.rsWinkler .rsPlayBtnIcon {
+.rsDefault .rsPlayBtnIcon {
 	width:64px;
 	display:block;
 	height:64px;
@@ -387,22 +393,20 @@
 	-moz-transition: .3s;
 	transition: .3s;
 
-	background:url(rs-default-inverted.png) no-repeat 0 -32px;
-	background-color: #FFF;
-	background-color: rgba(255,255,255,0.75);
-	*background-color: #FFF;
+	background:url(rs-default.png) no-repeat 0 -32px;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
 }
-.rsWinkler .rsPlayBtn:hover .rsPlayBtnIcon {
-	background-color: rgba(255,255,255,0.9);
+.rsDefault .rsPlayBtn:hover .rsPlayBtnIcon {
+	background-color: rgba(0,0,0,0.9);
 }
-.rsWinkler .rsBtnCenterer {
+.rsDefault .rsBtnCenterer {
 	position:absolute;
 	left:50%;
 	top:50%;
-	width: 20px;
-	height: 20px;
 }
-.rsWinkler .rsCloseVideoBtn {
+.rsDefault .rsCloseVideoBtn {
 	right: 0;
 	top: 0;
 	width: 44px;
@@ -414,22 +418,22 @@
 	-webkit-transform: translateZ(0);
 	
 }
-.rsWinkler .rsCloseVideoBtn.rsiOSBtn {
+.rsDefault .rsCloseVideoBtn.rsiOSBtn {
 	top: -38px;
 	right: -6px;
 }
 
-.rsWinkler .rsCloseVideoIcn {
+.rsDefault .rsCloseVideoIcn {
 	margin: 6px;
 	width: 32px;
 	height: 32px;
-	background: url('rs-default-inverted.png') -64px 0;
-	background-color: #FFF;
-	background-color: rgba(255,255,255,0.75);
-	*background-color: #FFF;
+	background: url('rs-default.png') -64px 0;
+	background-color: #000;
+	background-color: rgba(0,0,0,0.75);
+	*background-color: #000;
 }
-.rsWinkler .rsCloseVideoIcn:hover {
-	background-color: rgba(255,255,255,0.9);
+.rsDefault .rsCloseVideoIcn:hover {
+	background-color: rgba(0,0,0,0.9);
 }
 
 
@@ -440,10 +444,10 @@
 *
 ****************/
 
-.rsWinkler .rsPreloader {
+.rsDefault .rsPreloader {
 	width:20px;
 	height:20px;
-	background-image:url(../preloaders/preloader.gif);
+	background-image:url(../preloaders/preloader-white.gif);
 
 	left:50%;
 	top:50%;
@@ -459,17 +463,17 @@
 *  8. Global caption
 *
 ****************/
-.rsWinkler .rsGCaption {
+.rsDefault .rsGCaption {
 	position: absolute;
 	float: none;
 	bottom: 6px;
 	left: 6px;
 	text-align: left;
 
-	background: #FFF;
-    background: rgba(255,255,255, 0.75);
+	background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.75);
 
-	color: #000;
+	color: #FFF;
 	padding: 2px 8px;
 	width: auto;
 	font-size: 12px;
