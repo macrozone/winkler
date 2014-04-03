@@ -251,7 +251,7 @@ body
 	padding-left: 24px;
 }
 
-.main-content,  #menu-button,  #main-menu
+.main-content,  #menu-button,  #main-menu, #masthead .logo
 {
 	transition: 0.3s;
 }
@@ -262,8 +262,13 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 	-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
 	transform: translate(-222px,0px);
 }
-@media (min-width: 520px) {
-
+@media (max-width: 520px) {
+	body.menu-visible #masthead .logo
+	{
+		-ms-transform: translate(-222px,0); /* IE 9 */
+	-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
+	transform: translate(-222px,0px);
+	}
 }
 
 .fadeGradient
