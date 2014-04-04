@@ -62,7 +62,7 @@ jQuery(function($)
 		scrollToPage(target)
 	});
 
-	$("#menu-button").on("click", function()
+	$("#menu-button, #masthead .logo").on("click", function()
 	{
 
 		$("body").toggleClass("menu-visible");
