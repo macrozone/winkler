@@ -144,4 +144,13 @@ jQuery(function($)
 	adjustPageHeights();
 	scrollToPage(window.location.hash.substring(1))
 	
+
+
+
+	$(document).keypress(function(e) {
+	
+    if(e.which == 105) {
+      $("body").toggleClass("invertMode");
+    }
+});
 });

@@ -166,6 +166,8 @@ object {
 
 body
 {
+
+	background-color: black;
 	color: #4e454a;
 	font-size: 18px;
 }
@@ -189,6 +191,11 @@ body
 #masthead .logo img
 {
 	width: 257px;
+}
+
+.invertMode #masthead .logo img
+{
+	visibility: hidden;
 }
 
 
@@ -305,7 +312,7 @@ body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visi
 .page
 {
 text-align: left;
-background-color: black;
+
 
 
 
@@ -413,4 +420,22 @@ background-color: black;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: center;
+}
+
+.invertMode .page.depth-0.even
+{
+	 background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
+	 background-size: 257px;
+}
+
+.invertMode .page.depth-0.odd
+{
+	 -webkit-filter: invert(100%);  
+	  background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
+	  background-size: 257px;
+}
+
+.page.depth-0.odd img
+{
+	 -webkit-filter: invert(100%);  
 }
