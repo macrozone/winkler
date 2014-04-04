@@ -49,11 +49,12 @@ jQuery(function($)
 		autoSetHashEnabled = false;
 		selectPageInMenu(page);
 		var $target = $("#page_"+page);
-
+		var padding = parseInt($target.css("padding-top"),10);
+		var offset = 100 - padding;
 		if($target.length > 0)
 		{
 
-			jQuery.scrollTo($target, "slow", {offset: -100, onAfter:function()
+			jQuery.scrollTo($target, "slow", {offset: -offset, onAfter:function()
 				{
 					_.delay(function()
 						{
