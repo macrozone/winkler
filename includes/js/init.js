@@ -110,7 +110,24 @@ jQuery(function($)
 
 	$(".page.depth-2").on("click", ".pageTitle",function(event)
 	{
-		$(event.delegateTarget).toggleClass("open");
+		var $page = $(event.delegateTarget);
+		var $content = $page.find(".content");
+
+		var height = $content.find(".wrapper").outerHeight()+10;
+		
+		// little trick for max-height
+		if($page.hasClass("open"))
+		{
+			$page.removeClass("open");
+			$content.css("max-height",0);
+		}
+		else
+		{
+
+			$page.addClass("open");
+			$content.css("height", "auto").css("max-height",height);
+		}
+		
 		return false;
 	});
 	$(window).on("resize", adjustPageHeights);

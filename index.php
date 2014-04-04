@@ -38,18 +38,38 @@ function showHome()
 	<?php
 }
 
-function showOnePage($page, $index)
+function showOnePage($page, $index, $numberOfPages)
 {
 	$content = apply_filters('the_content', $page->post_content);
-	$title = $page->post_title;
+	
+	$customTitle = get_post_meta($page->ID, 'title', true);
+	if($customTitle == "false" || $customTitle == "hide")
+	{
+		$titleTag = "";
+	}
+	else
+	{
+		
+		if(empty($customTitle))
+			$title = $page->post_title;
+		else
+			$title = $customTitle;
+		$titleTag = "<h2 class='pageTitle'>$title</h2>";
+	}
+
+
 	$slug = $page->post_name;
 	$depth = count($page->ancestors);
 	$evenOdd = $index %2 == 0 ? "even": "odd";
+	$first = $index == 0 ? "first": "";
+	$last = $index == $numberOfPages-1 ? "last": "";
+
+	$classes = "page $slug depth-$depth $evenOdd $first $last";
 	?>
 	
-		<section id="page_<?php echo $slug ?>" class='page <?php echo "$slug" ?> depth-<?php echo $depth;?> <?php echo $evenOdd ?>'>
-	
-			<h2 class="pageTitle"><?php echo "$title" ?></h2>
+		<section id="page_<?php echo $slug ?>" class='<?php echo $classes; ?>'>
+		<?php echo "$titleTag" ?>
+			
 			<div class="container content">
 			<div class="wrapper col-xs-12 col-sm-10">
 				<?php echo "$content" ?>
@@ -87,11 +107,12 @@ function showPagesWithParent($parentID, $excludeSlugs = array())
 	);
 	$counter = 0;
 	$pages = get_pages($args);
+	$showOnePage = count($pages);
 	foreach ($pages as $page) 
 	{
 		if(!in_array($page->post_name, $excludeSlugs))
 		{
-			showOnePage($page, $counter);
+			showOnePage($page, $counter, $showOnePage);
 			$counter++;
 		}
 	}

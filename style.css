@@ -166,7 +166,7 @@ object {
 
 body
 {
-	color: #a7a1a7;
+	color: #4e454a;
 	font-size: 18px;
 }
 
@@ -223,7 +223,7 @@ body
 	right: -220px;
 	width: 220px;
 	background-color: black;
-	border-left: 1px solid #a7a1a7;
+	border-left: 1px solid #4e454a;
 	text-transform: uppercase;
 
 }
@@ -239,7 +239,7 @@ body
 }
 #main-menu ul li a
 {
-	color: #a7a1a7;
+	color: #4e454a;
 	font-size: 16px;
 }
 #main-menu ul li a.active, #main-menu ul li a:hover
@@ -328,11 +328,21 @@ background-color: black;
 {
 	/* -webkit-filter: invert(100%);  */
 }
-.page.depth-0, .page.depth-1
+.page.depth-0
 {
 	
 	padding-top: 100px;
 
+}
+
+.page.depth-1
+{
+	padding-bottom: 100px;
+}
+
+.page.depth-1.last
+{
+	padding-bottom: 0px;
 }
 
 
@@ -343,22 +353,21 @@ background-color: black;
 }
 .page.depth-2 >.content
 {
-	height: 0px;
 
+	-moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    max-height: 0px;
 }
 
-.page.depth-2.open >.content
-{
-	
-	height: auto;
-
-}
 .page> h2.pageTitle
 {
 
 	text-align: center;
 	font-weight: normal;
-	color: #a7a1a7;
+	color: #4e454a;
 	font-size: 30px;
 	text-transform: uppercase;;
 	
@@ -378,7 +387,7 @@ background-color: black;
 
 	margin: 8px 0px;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 22px;
 
 }
 .page.depth-2 h2.pageTitle:hover
@@ -392,7 +401,7 @@ background-color: black;
 
 	margin-left: 40px;
 	margin-right: 40px;
-	border-bottom: 1px solid #a7a1a7;
+	border-bottom: 1px solid #4e454a;
 }
 
 .page.home
