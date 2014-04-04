@@ -99,6 +99,7 @@ function _tk_scripts() {
     // load _tk styles
 	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
 
+	wp_enqueue_script('_tk-underscore', get_template_directory_uri().'/includes/js/underscore-min.js' );
 
     // load bootstrap js
 	wp_enqueue_script('_tk-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.js', array('jquery') );

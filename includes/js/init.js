@@ -1,36 +1,36 @@
 jQuery(function($)
 {
+	var autoSetHashEnabled = true;
 
 	var selectPageInMenu = function(page)
 	{
 		$("#main-menu a").removeClass("active");
 		$("#main-menu a[href='#"+page+"']").addClass("active");
 	}
-	$(document).on('scroll',function(e){
-		var offset = $(window).height()/2;
-		$('section.page.depth-0').each(function(){
-			if (
-				$(this).offset().top < window.pageYOffset + offset
-//begins before top
-&& $(this).offset().top + $(this).height() > window.pageYOffset + offset
-//but ends in visible area
-//+ 10 allows you to change hash before it hits the top border
-) {
-				var id = $(this).attr('id');
-			if(id)
-			{
-				page = id.substring(5);
-				selectPageInMenu(page);
-				window.location.hash = page;
-			}
-			else
-			{
-				window.location.hash = "";
-				selectPageInMenu("");
-			}
+	$(document).on('scroll',_.throttle(function(e){
+		if(autoSetHashEnabled)
+		{
+			var offset = $(window).height()/2;
+			$('section.page.depth-0').each(function(){
+				if ($(this).offset().top < window.pageYOffset + offset && $(this).offset().top + $(this).height() > window.pageYOffset + offset) 
+				{
+					var id = $(this).attr('id');
+					if(id)
+					{
+						page = id.substring(5);
+						selectPageInMenu(page);
+						window.location.hash = page;
+					}
+					else
+					{
+						window.location.hash = "";
+						selectPageInMenu("");
+					}
+				}
+
+			});
 		}
-	});
-	});
+	},300));
 	var adjustHeight = function(index, element)
 	{
 
@@ -46,13 +46,21 @@ jQuery(function($)
 	}
 	var scrollToPage = function(page)
 	{
+		autoSetHashEnabled = false;
 		selectPageInMenu(page);
 		var $target = $("#page_"+page);
 
 		if($target.length > 0)
 		{
 
-			jQuery.scrollTo($target, "slow", {offset: -0});
+			jQuery.scrollTo($target, "slow", {offset: -100, onAfter:function()
+				{
+					_.delay(function()
+						{
+								autoSetHashEnabled = true;
+						},300);
+				
+				}});
 		}
 	}
 	$("#main-menu li a").on("click", function()
@@ -130,7 +138,7 @@ jQuery(function($)
 		
 		return false;
 	});
-	$(window).on("resize", adjustPageHeights);
+	$(window).on("resize", _.debounce(adjustPageHeights,300));
 
 	adjustPageHeights();
 	scrollToPage(window.location.hash.substring(1))
