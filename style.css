@@ -435,7 +435,3 @@ text-align: left;
 	  background-size: 257px;
 }
 
-.page.depth-0.odd img
-{
-	 -webkit-filter: invert(100%);  
-}
