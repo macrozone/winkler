@@ -52,7 +52,7 @@ jQuery(function($)
 		if($target.length > 0)
 		{
 
-			jQuery.scrollTo($target, "fast", {offset: -0});
+			jQuery.scrollTo($target, "slow", {offset: -0});
 		}
 	}
 	$("#main-menu li a").on("click", function()
