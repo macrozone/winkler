@@ -166,7 +166,7 @@ object {
 
 body
 {
-
+	letter-spacing: 1px;
 	background-color: black;
 	color: #4e454a;
 	font-size: 18px;
@@ -413,13 +413,26 @@ text-align: left;
 
 .page.home
 {
+	position: relative;
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	background-image: url(includes/resources/images/home-picture.png);
+	background-image: url(includes/resources/images/home-picture.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: center;
+}
+
+.page.home .pageTitle
+{
+	letter-spacing: 4px;
+	font-size: 48px;
+	color: white;
+	margin-top: -60px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
 }
 
 .invertMode .page.depth-0.even
