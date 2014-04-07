@@ -14,7 +14,8 @@
         }, 10000);
       }
     };
-    return $intro.on("click", hide);
+    $intro.on("click", hide);
+    return setTimeout(hide, 3000);
   });
 
 }).call(this);

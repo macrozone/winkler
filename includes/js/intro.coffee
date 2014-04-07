@@ -14,6 +14,6 @@ jQuery ($) ->
 			,10000
 
 	$intro.on "click", hide
-	#setTimeout hide, 3000
+	setTimeout hide, 3000
 
 
