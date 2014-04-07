@@ -1,0 +1,45 @@
+
+#intro
+{
+	background-color: #5E3183;
+	position: fixed;
+	top: 0px;
+
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+
+	z-index: 1000;
+}
+#intro .layer
+{
+	background-size: contain;
+	background-repeat: repeat-x;
+	position: absolute;
+	top: 0px;
+
+	left: 0px;
+	bottom: 0px;
+	right: 0px;
+	animation: loopBg 10s linear infinite;
+}
+
+#intro .layer-1
+{
+	background-image: url(../resources/images/intro-1.png);
+}
+
+#intro .layer-2
+{
+	animation-direction: reverse;
+	background-image: url(../resources/images/intro-2.png);
+}
+
+@keyframes loopBg {
+  from{
+      background-position:0px;
+  }
+  to{
+      background-position:468px;
+  }
+}

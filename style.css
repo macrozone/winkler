@@ -146,12 +146,12 @@ object {
 
 
 /* Here some needed widget styles 
-* Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
 .widget { margin-bottom: 2em; }
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line. 
-* Note: you can change the whole appearance of the search_form() function in our searchform.php */
+ Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
 
 /* Make sure select elements fit in widgets */
@@ -160,7 +160,7 @@ object {
 }
 
 /* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!  
-* For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
 .comment .children { margin-left: 1.5em; } 
 
 
@@ -447,4 +447,5 @@ text-align: left;
 	  background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
 	  background-size: 257px;
 }
+
 

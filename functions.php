@@ -95,6 +95,7 @@ function _tk_scripts() {
 
     // load bootstrap css
 	wp_enqueue_style( '_tk-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.css' );
+		wp_enqueue_style( '_tk-intro-css', get_template_directory_uri() . '/includes/css/intro.css' );
 
     // load _tk styles
 	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
@@ -108,7 +109,8 @@ function _tk_scripts() {
 	wp_enqueue_script( '_tk-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
 	wp_enqueue_script( '_tk-jquery-scrollTo', get_template_directory_uri() . '/includes/js/jquery.scrollTo.min.js', array('jquery') );
 
-	wp_enqueue_script( '_tk-navigationscroll', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
+	wp_enqueue_script( '_tk-init', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
+	wp_enqueue_script( '_tk-intro', get_template_directory_uri() . '/includes/js/intro.js', array('jquery') );
  // hammer time
 	wp_enqueue_script('_tk-hamer', get_template_directory_uri().'/includes/js/hammer.min.js', array('jquery') );
 
