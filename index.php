@@ -121,11 +121,11 @@ function showPagesWithParent($parentID, $excludeSlugs = array())
 ?>
 
 
-<!--
+
 <div class="fadeGradient">
 </div>
 
--->
+
 
 
 
