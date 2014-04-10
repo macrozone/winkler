@@ -342,7 +342,7 @@
 	display: block;
 	position: absolute;
 	cursor: pointer;
-	
+	background-color: black;
 }
 .rsWinkler .rsFullscreenIcn {
 	display: block;
