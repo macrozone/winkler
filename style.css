@@ -26,6 +26,18 @@ Twitter Bootstrap
 @import url( includes/css/bootstrap-wp.css );
 
 
+@font-face {
+    font-family: 'winkler';
+    src: url('fonts/winkler.eot');
+    src: url('fonts/winkler.eot?#iefix') format('embedded-opentype'),
+         url('fonts/winkler.woff') format('woff'),
+         url('fonts/winkler.ttf') format('truetype'),
+         url('fonts/winkler.svg#WebfontRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 /* My Minimal WordPress Styling comes here */
 
