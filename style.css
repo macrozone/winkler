@@ -185,7 +185,7 @@ body
 #masthead .logo
 {
 	padding-top: 40px;
-	padding-left: 40px;
+	padding-left: 100px;
 }
 
 #masthead .logo img
@@ -204,7 +204,7 @@ body
 	cursor: pointer;
 	position: fixed;
 	top: 40px;
-	right: 40px;
+	left: 40px;
 	z-index: 200;
 	padding: 0px;
 	width: 20px;
@@ -221,16 +221,15 @@ body
 
 #main-menu
 {
-	padding-top: 40px;
+	padding-top: 120px;
 	padding-left: 40px;
 	z-index: 200;
 	position: fixed;
 	height: 100%;
 	top: 0px;
-	right: -220px;
+	left: -220px;
 	width: 220px;
-	background-color: black;
-	border-left: 1px solid #808080;
+
 	text-transform: uppercase;
 
 }
@@ -246,12 +245,12 @@ body
 }
 #main-menu ul li a
 {
-	color: #808080;
+	color: white;
 	font-size: 18px;
 }
 #main-menu ul li a.active, #main-menu ul li a:hover
 {
-	color: white;
+	color: #808080;
 	text-decoration: none;
 }
 
@@ -273,20 +272,15 @@ body
 	transition: 0.3s;
 }
 
-body.menu-visible .main-content, body.menu-visible  #menu-button, body.menu-visible #main-menu
+body.menu-visible #main-menu
 {
-	-ms-transform: translate(-222px,0); /* IE 9 */
-	-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
-	transform: translate(-222px,0px);
+	-ms-transform: translate(222px,0); /* IE 9 */
+	-webkit-transform: translate(222px,0px); /* Chrome, Safari, Opera */
+	transform: translate(222px,0px);
 }
-@media (max-width: 640px) {
-	body.menu-visible #masthead .logo
-	{
-		-ms-transform: translate(-222px,0); /* IE 9 */
-		-webkit-transform: translate(-222px,0px); /* Chrome, Safari, Opera */
-		transform: translate(-222px,0px);
-	}
-}
+
+	
+
 
 .fadeGradient
 {
@@ -437,14 +431,14 @@ text-align: left;
 
 .invertMode .page.depth-0.even
 {
-	 background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
+	 background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
 	 background-size: 210px;
 }
 
 .invertMode .page.depth-0.odd
 {
 	 -webkit-filter: invert(100%);  
-	  background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
+	  background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
 	  background-size: 210px;
 }
 

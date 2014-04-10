@@ -57,10 +57,10 @@ jQuery(function($)
 			jQuery.scrollTo($target, "slow", {offset: -offset, onAfter:function()
 				{
 					_.delay(function()
-						{
-								autoSetHashEnabled = true;
-						},300);
-				
+					{
+						autoSetHashEnabled = true;
+					},300);
+					
 				}});
 		}
 	}
@@ -148,9 +148,9 @@ jQuery(function($)
 
 
 	$(document).keypress(function(e) {
-	
-    if(e.which == 105) {
-      $("body").toggleClass("invertMode");
-    }
-});
+		
+		if(e.which == 105) {
+			$("body").toggleClass("invertMode");
+		}
+	});
 });

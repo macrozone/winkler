@@ -11,11 +11,11 @@
         $intro.addClass("hiding");
         return setTimeout(function() {
           return $intro.remove();
-        }, 10000);
+        }, 5000);
       }
     };
     $intro.on("click", hide);
-    return setTimeout(hide, 3000);
+    return setTimeout(hide, 5000);
   });
 
 }).call(this);

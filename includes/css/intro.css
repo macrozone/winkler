@@ -1,106 +1,122 @@
 #intro {
-    background-color: rgba(94, 49, 131,1);
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 1000;
-  
-    transition: 2s;
-  
-    }
+	background-color: rgba(46, 73, 144, 1);
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1000;
+
+	transition: 2s;
+
+}
 
 #intro.hiding
 {
 
-	background-color: rgba(94, 49, 131,0);
+	background-color: rgba(46, 73, 144, 0);
 }
 
 #intro.hiding .layer
 {
 
-	  opacity: 0;
+	opacity: 0;
 }
 
 #intro .logo
 {
+	z-index:1010;
 	position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-	transition-duration: 2s;
-	transition-delay: 1s;
-	background-image: url(../resources/images/logo-black.png);
-   	background-position: center;
-   	background-size: 257px;
-   	background-repeat: no-repeat;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	width: 100%;
+	transition-property: opacity;
+	transition-duration: 4s;
+	transition-delay: 2s;
+	background-image: url(../resources/images/logo_big_black.png);
+	background-position: center;
+	background-size: 460px;
+	background-repeat: no-repeat;
 }
+
+@media only screen and (max-width: 580px) {
+	#intro .logo
+	{
+		background-size: 240px;
+	}
+}
+
+
 #intro.hiding .logo
 {
-	  opacity: 0;
+	opacity: 0;
 }
 
 #intro .layer {
-	transition-duration: 2s;
+	transition-duration: 4s;
 	transition-delay: 1s;
-	 
-    -webkit-background-size: contain;
-    background-size: contain;
-    background-repeat: repeat-x;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-   
- 	-moz-animation: loopBg 30s infinite;
-    -webkit-animation: loopBg 30s infinite;
-    animation: loopBg 30s infinite;
-    
-    }
 
-    @media only screen and (orientation: portrait) {
- #intro .layer {
-    -webkit-background-size: cover;
-    background-size: cover;
+	-webkit-background-size: contain;
+	background-size: contain;
+	background-repeat: repeat-x;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+
+	-moz-animation: loopBg 30s infinite;
+	-webkit-animation: loopBg 30s infinite;
+	animation: loopBg 30s infinite;
+
 }
+
+@media only screen and (orientation: portrait) {
+	#intro .layer {
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
 }
 
 #intro .layer-1 {
 	background-image: url(../resources/images/intro-1.png)
-    }
-
-#intro .layer-2 {
-    -webkit-animation-direction: reverse;
-    -moz-animation-direction: reverse;
-    animation-direction: reverse;
-
-    background-image: url(../resources/images/intro-2.png)
-    }
-
-@-webkit-keyframes loopBg{
-from {
-    background-position: 0px;
-    }
-to {
-    background-position: 234px;
-    }
 }
-@-moz-keyframes loopBg{
-from {
-    background-position: 0px;
-    }
-to {
-    background-position: 234px;
-    }
+
+#intro .layer-2 
+{
+	-webkit-animation-direction: reverse;
+	-moz-animation-direction: reverse;
+	animation-direction: reverse;
+
+	background-image: url(../resources/images/intro-2.png)
+}
+
+@-webkit-keyframes loopBg {
+	from {
+		background-position: 0px;
+	}
+	to {
+		background-position: 234px;
+	}
+}
+@-moz-keyframes loopBg {
+	from {
+		background-position: 0px;
+	}
+	to {
+		background-position: 234px;
+	}
 }
 @keyframes loopBg {
-    from {
-        background-position: 0px;
-        } to {
-        background-position: 234px;;
-        }
-    }
+	from {
+		background-position: 0px;
+		} 
+		to 
+		{
+			background-position: 234px;;
+		}
+	}

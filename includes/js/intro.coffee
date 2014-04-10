@@ -11,9 +11,9 @@ jQuery ($) ->
 
 			setTimeout ->	
 				$intro.remove()
-			,10000
+			,5000
 
 	$intro.on "click", hide
-	setTimeout hide, 3000
+	setTimeout hide, 5000
 
 
