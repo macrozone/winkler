@@ -29,6 +29,12 @@
 }
 
 
+.rsWinkler.rsFullscreen
+{
+	background-color: black;
+}
+
+
 /***************
 *
 *  1. Arrows
@@ -342,7 +348,7 @@
 	display: block;
 	position: absolute;
 	cursor: pointer;
-	background-color: black;
+
 }
 .rsWinkler .rsFullscreenIcn {
 	display: block;
