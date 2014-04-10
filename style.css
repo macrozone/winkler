@@ -168,7 +168,7 @@ body
 {
 	letter-spacing: 1px;
 	background-color: black;
-	color: #4e454a;
+	color: #808080;
 	font-size: 18px;
 }
 
@@ -190,7 +190,7 @@ body
 
 #masthead .logo img
 {
-	width: 257px;
+	width: 210px;
 }
 
 .invertMode #masthead .logo img
@@ -207,8 +207,8 @@ body
 	right: 40px;
 	z-index: 200;
 	padding: 0px;
-	width: 23px;
-	height: 41px;
+	width: 20px;
+	height: 34px;
 	border: none;
 	background-image: url(includes/resources/images/menu.png);
 	background-color: transparent;
@@ -230,7 +230,7 @@ body
 	right: -220px;
 	width: 220px;
 	background-color: black;
-	border-left: 1px solid #4e454a;
+	border-left: 1px solid #808080;
 	text-transform: uppercase;
 
 }
@@ -246,7 +246,7 @@ body
 }
 #main-menu ul li a
 {
-	color: #4e454a;
+	color: #808080;
 	font-size: 18px;
 }
 #main-menu ul li a.active, #main-menu ul li a:hover
@@ -374,7 +374,7 @@ text-align: left;
 
 	text-align: center;
 	font-weight: normal;
-	color: #4e454a;
+	color: #808080;
 	font-size: 30px;
 	text-transform: uppercase;;
 	
@@ -408,7 +408,7 @@ text-align: left;
 
 	margin-left: 40px;
 	margin-right: 40px;
-	border-bottom: 1px solid #4e454a;
+	border-bottom: 1px solid #808080;
 }
 
 .page.home
@@ -438,14 +438,14 @@ text-align: left;
 .invertMode .page.depth-0.even
 {
 	 background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
-	 background-size: 257px;
+	 background-size: 210px;
 }
 
 .invertMode .page.depth-0.odd
 {
 	 -webkit-filter: invert(100%);  
 	  background: black url(includes/resources/images/logo.png) fixed no-repeat 40px 40px;  
-	  background-size: 257px;
+	  background-size: 210px;
 }
 
 
