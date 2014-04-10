@@ -280,7 +280,7 @@ body
 {
 	display: none;
 }
-#main-menu ul li.depth-0, #main-menu ul li.depth-1
+#main-menu ul li.depth-0
 {
 	display: block;	
 }
