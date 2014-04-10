@@ -63,6 +63,24 @@ body {
 	margin: 0 auto;
 }
 
+a
+{
+	text-decoration: none;
+	border-bottom: 1px solid;
+	color: #808080;
+}
+
+a:hover
+{
+	text-decoration: none;
+	border-bottom: 1px solid;
+	color: white;
+}
+
+strong
+{
+	text-transform: uppercase;
+}
 
 /* Images and wp-captions should always fit and be responsive */
 img {
@@ -191,69 +209,31 @@ body
 	z-index: 200;
 	top: 0px;
 	left: 0px;
+	right: 0px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+	padding: 40px;
 	
 }
-
-#masthead .logo
-{
-	padding-top: 40px;
-	padding-left: 100px;
-	z-index: 220;
-}
-
-#masthead .logo img
-{
-	width: 210px;
-}
-
-.invertMode #masthead .logo img
-{
-	visibility: hidden;
-}
-
-
-#menu-button
-{
-	cursor: pointer;
-	position: fixed;
-	top: 40px;
-	left: 40px;
-	z-index: 200;
-	padding: 0px;
-	width: 20px;
-	height: 34px;
-	border: none;
-	background-image: url(includes/resources/images/menu.png);
-	background-color: transparent;
-	background-size: cover;
-
-
-}
-
-
-
-
-
 #main-menu
 {
-	padding-top: 120px;
-	padding-left: 40px;
+	padding-left: 0px;
+	padding-top: 0px;
+	padding-right:80px;
 	z-index: 100;
-	position: fixed;
-	height: 100%;
-	top: 0px;
-	left: -220px;
-	width: 220px;
+	
 
-	text-transform: uppercase;
-	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+	float: right;
 
+
+	-ms-transform: translate(0px,-100px); /* IE 9 */
+	-webkit-transform: translate(0px,-100px); /* Chrome, Safari, Opera */
+	transform: translate(0px,-100px);
 }
 
 #main-menu ul
@@ -263,12 +243,16 @@ body
 #main-menu ul li
 {
 	list-style: none;
-	padding-bottom: 1px;
+	padding-right: 16px;
+	float: left;
+
 }
 #main-menu ul li a
 {
 	color: white;
-	font-size: 18px;
+	font-size: 15px;
+	border-bottom: none;
+
 }
 #main-menu ul li a.active, #main-menu ul li a:hover
 {
@@ -289,16 +273,82 @@ body
 	padding-left: 24px;
 }
 
+
+@media only screen and (max-width: 980px) {
+	
+
+	#main-menu
+	{
+		position: absolute;
+		padding-top: 100px;
+		padding-left: 40px;
+		padding-bottom: 20px;
+		left: 0px;
+		top: 0px;
+		background-color: black;
+		right: 0px;
+			-ms-transform: translate(0px,-100%); /* IE 9 */
+	-webkit-transform: translate(0px,-100%); /* Chrome, Safari, Opera */
+	transform: translate(0px,-100%);
+	}
+
+}
+
+#masthead .logo
+{
+	
+	z-index: 220;
+	width: 210px;
+	padding:right 20px;
+	padding-bottom: 20px;
+	position: relative;
+}
+
+
+
+.invertMode #masthead .logo img
+{
+	visibility: hidden;
+}
+
+
+#menu-button
+{
+	cursor: pointer;
+	position: fixed;
+	top: 40px;
+	right: 40px;
+	z-index: 200;
+	padding: 0px;
+	width: 20px;
+	height: 34px;
+	border: none;
+	background-image: url(includes/resources/images/menu.png);
+	background-color: transparent;
+	background-size: cover;
+
+
+}
+
+
+
+
+
+
 .main-content,  #menu-button,  #main-menu, #masthead .logo
 {
-	transition: 0.3s;
+	-webkit-transition: 0.3s -webkit-transform;
+	-moz-transition: 0.3s -moz-transform;
+	-ms-ransition: 0.3s -ms-transform;
+	-ot-ransition: 0.3s -ot-transform;
+	transition: 0.3s transform;
 }
 
 body.menu-visible #main-menu
 {
-	-ms-transform: translate(220px,0); /* IE 9 */
-	-webkit-transform: translate(220px,0px); /* Chrome, Safari, Opera */
-	transform: translate(220px,0px);
+	-ms-transform: translate(0px,0%); /* IE 9 */
+	-webkit-transform: translate(0px,0%); /* Chrome, Safari, Opera */
+	transform: translate(0px,0%);
 }
 
 
@@ -312,14 +362,7 @@ body.menu-visible #main-menu
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
-	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-}
+	}
 
 .clear
 {
@@ -444,7 +487,7 @@ body.menu-visible #main-menu
 	letter-spacing: 4px;
 	font-size: 88px;
 	color: white;
-	margin-top: -60px;
+	margin-top: -74px;
 	position: absolute;
 	top: 50%;
 	width: 100%;

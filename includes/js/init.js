@@ -8,6 +8,7 @@ jQuery(function($)
 		$("#main-menu a[href='#"+page+"']").addClass("active");
 	}
 	$(document).on('scroll',_.throttle(function(e){
+
 		if(autoSetHashEnabled)
 		{
 			var offset = $(window).height()/2;
@@ -46,22 +47,26 @@ jQuery(function($)
 	}
 	var scrollToPage = function(page)
 	{
-		autoSetHashEnabled = false;
-		selectPageInMenu(page);
-		var $target = $("#page_"+page);
-		var padding = parseInt($target.css("padding-top"),10);
-		var offset = 100 - padding;
-		if($target.length > 0)
+		
+		if(page && page.length > 0)
 		{
+			autoSetHashEnabled = false;
 
-			jQuery.scrollTo($target, "slow", {offset: -offset, onAfter:function()
-				{
-					_.delay(function()
+			var $target = $("#page_"+page);
+			var padding = parseInt($target.css("padding-top"),10);
+			var offset = 100 - padding;
+			if($target.length > 0)
+			{
+
+				jQuery.scrollTo($target, "slow", {offset: -offset, onAfter:function()
 					{
-						autoSetHashEnabled = true;
-					},300);
-					
-				}});
+						_.delay(function()
+						{
+							autoSetHashEnabled = true;
+						},600);
+
+					}});
+			}
 		}
 	}
 	$("#main-menu li a").on("click", function()

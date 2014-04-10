@@ -31,6 +31,7 @@ $pages = get_pages($args);
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link rel="shortcut icon" href="<?php echo get_bloginfo('template_url'); ?>/favicon.ico" />
 	<?php wp_head(); ?>
 </head>
 
@@ -38,31 +39,23 @@ $pages = get_pages($args);
 	<?php do_action( 'before' ); ?>
 	
 	<header id="masthead" class="site-header" role="banner">
-		<div class="logo">
-		<!--
-					<object data="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.svg" type="image/svg+xml">
- 	<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
- 	</object>
- 	-->
- 	<img src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
-</div>
+	
+ 	<img class="logo" src="<?php echo get_bloginfo('template_url') ?>/includes/resources/images/logo.png"/>
+
 					
 				
 
 
-		<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
-		<a type="button" id="menu-button">
 		
-		</a>		
-
 
 		<nav id="main-menu" class="site-navigation">	
 
 
 			<ul>
-<li class="page_item depth-0">
+							<li class="page_item depth-0">
 <a href="#">Home</a>
 </li>
+
 				<?php
 				foreach ($pages as $page_data) {
 					$content = apply_filters('the_content', $page_data->post_content);
@@ -78,8 +71,14 @@ $pages = get_pages($args);
 					<?php 
 				} 
 				?>
+
 			</ul>
 
 		</nav><!-- .site-navigation -->
+		<div class="clear"></div>
+		<a type="button" id="menu-button">
+		
+		</a>	
+
 	</header><!-- #masthead -->
 
