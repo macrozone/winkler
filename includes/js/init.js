@@ -54,7 +54,7 @@ jQuery(function($)
 
 			var $target = $("#page_"+page);
 			var padding = parseInt($target.css("padding-top"),10);
-			var offset = 100 - padding;
+			var offset = 150 - padding;
 			if($target.length > 0)
 			{
 
