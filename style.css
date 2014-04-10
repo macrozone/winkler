@@ -258,7 +258,7 @@ body
 #main-menu ul li a
 {
 	color: white;
-	font-size: 16px;
+	font-size: 18px;
 }
 #main-menu ul li a.active, #main-menu ul li a:hover
 {
@@ -400,7 +400,7 @@ text-align: left;
 
 	margin: 8px 0px;
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 18px;
 
 }
 .page.depth-2 h2.pageTitle:hover
