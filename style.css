@@ -27,14 +27,14 @@ Twitter Bootstrap
 
 
 @font-face {
-    font-family: 'winkler';
-    src: url('fonts/winkler.eot');
-    src: url('fonts/winkler.eot?#iefix') format('embedded-opentype'),
-         url('fonts/winkler.woff') format('woff'),
-         url('fonts/winkler.ttf') format('truetype'),
-         url('fonts/winkler.svg#WebfontRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'winkler';
+	src: url('fonts/winkler.eot');
+	src: url('fonts/winkler.eot?#iefix') format('embedded-opentype'),
+	url('fonts/winkler.woff') format('woff'),
+	url('fonts/winkler.ttf') format('truetype'),
+	url('fonts/winkler.svg#WebfontRegular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 
 }
 
@@ -163,7 +163,7 @@ Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify
 .widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
 
 /* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line. 
- Note: you can change the whole appearance of the search_form() function in our searchform.php */
+Note: you can change the whole appearance of the search_form() function in our searchform.php */
 .widget_search .search-form input[type="submit"] { display: none; }
 
 /* Make sure select elements fit in widgets */
@@ -172,7 +172,7 @@ Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify
 }
 
 /* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!  
- For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
 .comment .children { margin-left: 1.5em; } 
 
 
@@ -198,6 +198,7 @@ body
 {
 	padding-top: 40px;
 	padding-left: 100px;
+	z-index: 220;
 }
 
 #masthead .logo img
@@ -225,6 +226,8 @@ body
 	background-image: url(includes/resources/images/menu.png);
 	background-color: transparent;
 	background-size: cover;
+
+
 }
 
 
@@ -235,7 +238,7 @@ body
 {
 	padding-top: 120px;
 	padding-left: 40px;
-	z-index: 200;
+	z-index: 100;
 	position: fixed;
 	height: 100%;
 	top: 0px;
@@ -243,6 +246,13 @@ body
 	width: 220px;
 
 	text-transform: uppercase;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 
 }
 
@@ -286,12 +296,12 @@ body
 
 body.menu-visible #main-menu
 {
-	-ms-transform: translate(222px,0); /* IE 9 */
-	-webkit-transform: translate(222px,0px); /* Chrome, Safari, Opera */
-	transform: translate(222px,0px);
+	-ms-transform: translate(220px,0); /* IE 9 */
+	-webkit-transform: translate(220px,0px); /* Chrome, Safari, Opera */
+	transform: translate(220px,0px);
 }
 
-	
+
 
 
 .fadeGradient
@@ -317,7 +327,7 @@ body.menu-visible #main-menu
 }
 .page
 {
-text-align: left;
+	text-align: left;
 
 
 
@@ -368,11 +378,11 @@ text-align: left;
 {
 
 	-moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-    max-height: 0px;
+	-ms-transition: all .5s;
+	-o-transition: all .5s;
+	-webkit-transition: all .5s;
+	transition: all .5s;
+	max-height: 0px;
 }
 
 .page> h2.pageTitle
@@ -443,15 +453,15 @@ text-align: left;
 
 .invertMode .page.depth-0.even
 {
-	 background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
-	 background-size: 210px;
+	background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
+	background-size: 210px;
 }
 
 .invertMode .page.depth-0.odd
 {
-	 -webkit-filter: invert(100%);  
-	  background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
-	  background-size: 210px;
+	-webkit-filter: invert(100%);  
+	background: black url(includes/resources/images/logo.png) fixed no-repeat 100px 40px;  
+	background-size: 210px;
 }
 
 
