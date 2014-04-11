@@ -360,10 +360,11 @@ body.menu-visible #main-menu
 .page
 {
 	text-align: left;
+}
 
-
-
-
+.page p
+{
+	margin-bottom: 38px;
 }
 .page .container
 {
