@@ -1,8 +1,8 @@
 <?php
 /**
- * _tk functions and definitions
+ * winkler functions and definitions
  *
- * @package _tk
+ * @package winkler
  */
 
 /**
@@ -11,7 +11,7 @@
 if ( ! isset( $content_width ) )
 	$content_width = 750; /* pixels */
 
-if ( ! function_exists( '_tk_setup' ) ) :
+if ( ! function_exists( 'winkler_setup' ) ) :
 /**
  * Set up theme defaults and register support for various WordPress features.
  *
@@ -19,7 +19,7 @@ if ( ! function_exists( '_tk_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  */
-function _tk_setup() {
+function winkler_setup() {
 	global $cap, $content_width;
 
     // This theme styles the visual editor with editor-style.css to match the theme style.
@@ -47,7 +47,7 @@ function _tk_setup() {
 		/**
 		 * Setup the WordPress core custom background feature.
 		*/
-		add_theme_support( 'custom-background', apply_filters( '_tk_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'winkler_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 			) ) );
@@ -57,7 +57,7 @@ function _tk_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on _tk, use a find and replace
+	 * If you're building a theme based on winkler, use a find and replace
 	 * to change 'winkler' to the name of your theme in all the template files
 	*/
 	load_theme_textdomain( 'winkler', get_template_directory() . '/languages' );
@@ -70,13 +70,13 @@ function _tk_setup() {
 		) );
 
 }
-endif; // _tk_setup
-add_action( 'after_setup_theme', '_tk_setup' );
+endif; // winkler_setup
+add_action( 'after_setup_theme', 'winkler_setup' );
 
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function _tk_widgets_init() {
+function winkler_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Sidebar', 'winkler' ),
 		'id'            => 'sidebar-1',
@@ -86,46 +86,46 @@ function _tk_widgets_init() {
 		'after_title'   => '</h3>',
 		) );
 }
-add_action( 'widgets_init', '_tk_widgets_init' );
+add_action( 'widgets_init', 'winkler_widgets_init' );
 
 /**
  * Enqueue scripts and styles
  */
-function _tk_scripts() {
+function winkler_scripts() {
 
     // load bootstrap css
-	wp_enqueue_style( '_tk-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.css' );
-		wp_enqueue_style( '_tk-intro-css', get_template_directory_uri() . '/includes/css/intro.css' );
+	wp_enqueue_style( 'winkler-bootstrap', get_template_directory_uri() . '/includes/resources/bootstrap/css/bootstrap.css' );
+		wp_enqueue_style( 'winkler-intro-css', get_template_directory_uri() . '/includes/css/intro.css' );
 
-    // load _tk styles
-	wp_enqueue_style( '_tk-style', get_stylesheet_uri() );
+    // load winkler styles
+	wp_enqueue_style( 'winkler-style', get_stylesheet_uri() );
 
-	wp_enqueue_script('_tk-underscore', get_template_directory_uri().'/includes/js/underscore-min.js' );
+	wp_enqueue_script('winkler-underscore', get_template_directory_uri().'/includes/js/underscore-min.js' );
 
     // load bootstrap js
-	wp_enqueue_script('_tk-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.js', array('jquery') );
+	wp_enqueue_script('winkler-bootstrapjs', get_template_directory_uri().'/includes/resources/bootstrap/js/bootstrap.js', array('jquery') );
 
     // load bootstrap wp js
-	wp_enqueue_script( '_tk-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
-	wp_enqueue_script( '_tk-jquery-scrollTo', get_template_directory_uri() . '/includes/js/jquery.scrollTo.min.js', array('jquery') );
+	wp_enqueue_script( 'winkler-bootstrapwp', get_template_directory_uri() . '/includes/js/bootstrap-wp.js', array('jquery') );
+	wp_enqueue_script( 'winkler-jquery-scrollTo', get_template_directory_uri() . '/includes/js/jquery.scrollTo.min.js', array('jquery') );
 
-	wp_enqueue_script( '_tk-init', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
-	wp_enqueue_script( '_tk-intro', get_template_directory_uri() . '/includes/js/intro.js', array('jquery') );
+	wp_enqueue_script( 'winkler-init', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
+	wp_enqueue_script( 'winkler-intro', get_template_directory_uri() . '/includes/js/intro.js', array('jquery') );
  // hammer time
-	wp_enqueue_script('_tk-hamer', get_template_directory_uri().'/includes/js/hammer.min.js', array('jquery') );
+	wp_enqueue_script('winkler-hamer', get_template_directory_uri().'/includes/js/hammer.min.js', array('jquery') );
 
-	wp_enqueue_script( '_tk-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'winkler-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( '_tk-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'winkler-keyboard-image-navigation', get_template_directory_uri() . '/includes/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 }
-add_action( 'wp_enqueue_scripts', '_tk_scripts' );
+add_action( 'wp_enqueue_scripts', 'winkler_scripts' );
 
 /**
  * Implement the Custom Header feature.
