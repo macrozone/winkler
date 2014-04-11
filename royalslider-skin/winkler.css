@@ -490,6 +490,8 @@
 
 .rsWinkler .rsGCaption h3
 {
+	margin: 0px;
+	margin-bottom: 4px;
 	font-size: 14px;
 	text-transform: uppercase;
 }
