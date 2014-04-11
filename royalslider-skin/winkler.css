@@ -34,7 +34,6 @@
 	background-color: black;
 }
 
-
 /***************
 *
 *  1. Arrows
@@ -472,7 +471,7 @@
 .rsWinkler .rsGCaption {
 	position: absolute;
 	float: none;
-	bottom: 0px;
+	bottom: 72px;
 	left: 0px;
 	text-align: left;
 
@@ -485,4 +484,21 @@
 	text-align: center;
 	font-size: 14px;
 	
+}
+
+
+
+.rsWinkler .rsGCaption h3
+{
+	font-size: 14px;
+	text-transform: uppercase;
+}
+.rsWinkler .rsGCaption p
+{
+	font-size: 14px;
+}
+
+.rsWinkler .rsThumbs
+{
+	padding-top: 100px;
 }

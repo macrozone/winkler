@@ -111,8 +111,6 @@ function winkler_scripts() {
 
 	wp_enqueue_script( 'winkler-init', get_template_directory_uri() . '/includes/js/init.js', array('jquery') );
 	wp_enqueue_script( 'winkler-intro', get_template_directory_uri() . '/includes/js/intro.js', array('jquery') );
- // hammer time
-	wp_enqueue_script('winkler-hamer', get_template_directory_uri().'/includes/js/hammer.min.js', array('jquery') );
 
 	wp_enqueue_script( 'winkler-skip-link-focus-fix', get_template_directory_uri() . '/includes/js/skip-link-focus-fix.js', array(), '20130115', true );
 
