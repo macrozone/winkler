@@ -425,7 +425,7 @@ body.menu-visible #main-menu
 	font-weight: normal;
 	color: #808080;
 	font-size: 30px;
-	text-transform: uppercase;;
+	/*text-transform: uppercase;;*/
 	
 	margin: 0px;
 	padding-bottom: 20px;
