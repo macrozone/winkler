@@ -50,15 +50,22 @@ jQuery(function($)
 		
 		if(page && page.length > 0)
 		{
-			autoSetHashEnabled = false;
+			
 
 			var $target = $("#page_"+page);
+			scrollToTarget($target);
+		}
+	}
+	var scrollToTarget = function($target)
+	{
+		autoSetHashEnabled = false;
+			
 			var padding = parseInt($target.css("padding-top"),10);
 			var offset = 150 - padding;
 			if($target.length > 0)
 			{
 
-				jQuery.scrollTo($target, "slow", {offset: -offset, onAfter:function()
+				$.scrollTo($target, "slow", {offset: -offset, onAfter:function()
 					{
 						_.delay(function()
 						{
@@ -67,7 +74,6 @@ jQuery(function($)
 
 					}});
 			}
-		}
 	}
 	$("#main-menu li a").on("click", function()
 	{
@@ -115,7 +121,9 @@ jQuery(function($)
 
 			$page.addClass("open");
 			$content.css("height", "auto").css("max-height",height);
+			scrollToTarget($page);
 		}
+
 		
 		return false;
 	});
