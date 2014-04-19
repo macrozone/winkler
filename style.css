@@ -191,6 +191,13 @@ body
 	font-size: 12px;
 }
 
+h3
+{
+	color: #808080;
+	font-size: 12px;
+	font-weight: normal;
+}
+
 /** content **/
 #masthead
 {
@@ -371,6 +378,15 @@ body.menu-visible #main-menu
 {
 	margin-bottom: 38px;
 }
+
+.page h3
+{
+	color: #808080;
+	font-size: 12px;
+	font-weight: normal;
+	margin-bottom: 19px;
+}
+
 .page .container
 {
 	padding-bottom: 0px;
