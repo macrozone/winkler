@@ -522,9 +522,8 @@ body.menu-visible #main-menu
 {
 	max-width: 100%;
 }
-.wp-video-shortcode div
-{
-		max-width: 100%;
+.wp-audio-shortcode {
+	max-width: 100%;
 }
 
 
