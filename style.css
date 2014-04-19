@@ -379,6 +379,13 @@ body.menu-visible #main-menu
 	margin-bottom: 38px;
 }
 
+.page h1
+{
+	letter-spacing: 4px;
+	font-size: 88px;
+	color: white;
+	
+}
 .page h3
 {
 	color: #808080;
@@ -481,8 +488,9 @@ body.menu-visible #main-menu
 	border-bottom: 1px solid #808080;
 }
 
-.page.home
+.page.depth-0.first
 {
+	display: table;
 	position: relative;
 	width: 100%;
 	margin: 0px;
@@ -493,16 +501,10 @@ body.menu-visible #main-menu
 	background-position-x: center;
 }
 
-.page.home .pageTitle
+.page.depth-0.first .content
 {
-	letter-spacing: 4px;
-	font-size: 88px;
-	color: white;
-	margin-top: -74px;
-	position: absolute;
-	top: 50%;
-	width: 100%;
-	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
 }
 
 .invertMode .page.depth-0.even
