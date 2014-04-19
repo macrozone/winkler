@@ -518,4 +518,13 @@ body.menu-visible #main-menu
 	background-size: 210px;
 }
 
+.wp-video-shortcode
+{
+	max-width: 100%;
+}
+.wp-video-shortcode div
+{
+		max-width: 100%;
+}
+
 
