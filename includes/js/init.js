@@ -45,7 +45,7 @@ jQuery(function($)
 
 		$(".page.depth-0").each(adjustHeight);
 	}
-	var scrollToPage = function(page)
+	var scrollToPage = function(page, speed)
 	{
 		
 		if(page && page.length > 0)
@@ -53,11 +53,12 @@ jQuery(function($)
 			
 
 			var $target = $("#page_"+page);
-			scrollToTarget($target);
+			scrollToTarget($target, speed);
 		}
 	}
-	var scrollToTarget = function($target)
+	var scrollToTarget = function($target, speed)
 	{
+		speed = speed || "slow";
 		autoSetHashEnabled = false;
 			
 			var padding = parseInt($target.css("padding-top"),10);
@@ -65,7 +66,7 @@ jQuery(function($)
 			if($target.length > 0)
 			{
 
-				$.scrollTo($target, "slow", {offset: -offset, onAfter:function()
+				$.scrollTo($target, speed, {offset: -offset, onAfter:function()
 					{
 						_.delay(function()
 						{
@@ -79,7 +80,7 @@ jQuery(function($)
 	{
 		$("body").removeClass("menu-visible");
 		var target = $(this).attr("href").substring(1);
-		scrollToPage(target)
+		scrollToPage(target, "slow")
 	});
 
 	$("#menu-button, #masthead .logo").on("click", function()
@@ -102,14 +103,19 @@ jQuery(function($)
 		else 
 			return true;
 	});
-
+	$(".page").on("click", ".pageTitle", function(event)
+	{
+		var $page = $(event.delegateTarget);
+		scrollToTarget($page, "slow");
+		return false;
+	});
 	$(".page.depth-2").on("click", ".pageTitle",function(event)
 	{
 		var $page = $(event.delegateTarget);
 		var $content = $page.find(".content");
 
 		var height = $content.find(".wrapper").outerHeight()+10;
-		
+		scrollToTarget($page, "slow");
 		// little trick for max-height
 		if($page.hasClass("open"))
 		{
@@ -121,8 +127,9 @@ jQuery(function($)
 
 			$page.addClass("open");
 			$content.css("height", "auto").css("max-height",height);
-			scrollToTarget($page);
+			
 		}
+		
 
 		
 		return false;

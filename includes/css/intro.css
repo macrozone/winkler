@@ -14,7 +14,7 @@
 
 #intro.hiding
 {
-
+	pointer-events: none;
 	background-color: rgba(46, 73, 144, 0);
 }
 
