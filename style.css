@@ -188,13 +188,13 @@ body
 	letter-spacing: 1px;
 	background-color: black;
 	color: #808080;
-	font-size: 12px;
+	font-size: 13px;
 }
 
 h3
 {
 	color: #808080;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: normal;
 }
 
@@ -382,7 +382,7 @@ body.menu-visible #main-menu
 .page h3
 {
 	color: #808080;
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: normal;
 	margin-bottom: 19px;
 }
