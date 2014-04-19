@@ -80,11 +80,12 @@ function showOnePage($page, $index, $numberOfPages)
 			<?php
 
 			if($page->ID >0)
-				showPagesWithParent($page->ID);
+				$children = showPagesWithParent($page->ID);
+				
 			?>
-
-			<div class="separator"></div>
-
+			<?php if($children == 0) { ?>
+			<div class="separator container"><div class="inner col-xs-12 col-sm-10"><div class="line"></div></div>
+			<?php } ?>
 		</section>
 	
 	<?php
@@ -116,6 +117,7 @@ function showPagesWithParent($parentID, $excludeSlugs = array())
 			$counter++;
 		}
 	}
+	return $counter;
 }
 
 ?>

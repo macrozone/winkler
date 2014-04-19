@@ -372,6 +372,7 @@ body.menu-visible #main-menu
 .page
 {
 	text-align: left;
+	position: relative;
 }
 
 .page p
@@ -481,7 +482,37 @@ body.menu-visible #main-menu
 	color: white;
 }
 
-.page.depth-2 .separator, .page.depth-1 > h2.pageTitle
+.page.depth-0 > .separator
+{
+	
+		position: absolute;
+		margin-left: auto;
+margin-right: auto;
+left: 0;
+right: 0;
+		bottom:0px;
+
+
+}
+.page.depth-0 > .separator > .inner {
+float: none;
+		margin: 0 auto;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+.page.depth-0 > .separator > .inner > .line
+{
+		border-bottom: 1px solid #808080;
+		
+		
+		height:1px;
+}
+.page.depth-2 >.separator, .page.depth-2 >.separator > .inner
+{
+	width: 100%;
+	padding: 0px;
+}
+.page.depth-2 >.separator >.inner >.line, .page.depth-1 > h2.pageTitle
 {
 
 	margin-left: 40px;
@@ -500,6 +531,11 @@ body.menu-visible #main-menu
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position-x: center;
+}
+
+.page.depth-0.first .separator
+{
+	display: none;
 }
 .page.depth-0.first .content 
 {

@@ -80,7 +80,7 @@ jQuery(function($)
 	{
 		$("body").removeClass("menu-visible");
 		var target = $(this).attr("href").substring(1);
-		scrollToPage(target, "slow")
+		scrollToPage(target, "slow");
 	});
 
 	$("#menu-button, #masthead .logo").on("click", function()
