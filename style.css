@@ -384,6 +384,7 @@ body.menu-visible #main-menu
 	letter-spacing: 4px;
 	font-size: 88px;
 	color: white;
+	margin: 20px 0px;
 	
 }
 .page h3
@@ -500,8 +501,13 @@ body.menu-visible #main-menu
 	background-repeat: no-repeat;
 	background-position-x: center;
 }
+.page.depth-0.first .content 
+{
+	display: table-row;
+	height: 100%;	
+}
 
-.page.depth-0.first .content
+.page.depth-0.first .content .wrapper
 {
 	display: table-cell;
 	vertical-align: middle;
