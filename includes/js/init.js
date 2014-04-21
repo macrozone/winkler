@@ -76,7 +76,7 @@ jQuery(function($)
 					}});
 			}
 	}
-	$("#main-menu li a").on("click", function()
+	$("a[href^='#'").on("click", function()
 	{
 		$("body").removeClass("menu-visible");
 		var target = $(this).attr("href").substring(1);
